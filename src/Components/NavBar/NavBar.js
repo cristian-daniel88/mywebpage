@@ -1,55 +1,51 @@
+import React from "react";
+import {
+  ButtonTranslate,
+  Details,
+  Flag,
+  H2,
+  MenuBurguer,
+  Name,
+  Nav,
+  NavBarContainer,
+  NavLi,
+  NavUl,
+  PhotoContainer,
+  Position,
+  Profile,
 
-
-import React from 'react'
-import { ButtonTranslate, Details, H2, MenuBurguer, Name, Nav, NavBarContainer, NavLi, NavUl, PhotoContainer, Position, Profile, TranslateContainer } from './NavBarStyles';
-
+} from "./NavBarStyles";
 
 function NavBar() {
-    return (
-        <NavBarContainer>
+  return (
+    <NavBarContainer>
+      <Profile>
+        <PhotoContainer />
 
-            <Profile>
+        <Details>
+          <Name>Cristian Daniel Herrera</Name>
 
-               <PhotoContainer/>
+          <Position>
+            <H2>Web Developer</H2>
+            <MenuBurguer />
+          </Position>
+        </Details>
+      </Profile>
 
-               <Details>
+      <Nav>
+        <NavUl>
+          <NavLi>Home</NavLi>
+          <NavLi>About me</NavLi>
+          <NavLi>Projects</NavLi>
+          <NavLi>Contact</NavLi>
+          <ButtonTranslate><Flag/>Es</ButtonTranslate>
+        </NavUl>
 
-               <Name>
-                   Cristian Daniel Herrera
-               </Name>
-                    
-               <Position>
-                   <H2>
-                       Web Developer
-                   </H2>
-                   <MenuBurguer/>     
-               </Position>
-              
-               </Details>
-
-            </Profile>
-
-
-
-
-            <Nav>
-
-                <NavUl>
-                    <NavLi>About me</NavLi>
-                    <NavLi>Projects</NavLi>
-                    <NavLi>Contact</NavLi>
-                </NavUl>
-
-                <TranslateContainer>
-                    <ButtonTranslate>En</ButtonTranslate>
-                    <ButtonTranslate>Es</ButtonTranslate>
-                </TranslateContainer>
-            </Nav>
-
-
-        </NavBarContainer>
         
-    )
+      </Nav>
+
+    </NavBarContainer>
+  );
 }
 
-export default NavBar
+export default NavBar;
