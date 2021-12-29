@@ -9,12 +9,11 @@ padding: 5px 7%;
 display: flex;
 position: fixed;
 flex-wrap: wrap;
+z-index: 100;
 @media screen and (max-width: 600px) {
     padding: 5px 1%;
 
   }
-
-
 `
 // Profile
 
@@ -139,15 +138,65 @@ export const NavUl = styled.ul`
 display: flex;
 justify-content: center;
 margin-bottom: 4%;
-
-
 `
 export const NavLi = styled.li`
 list-style: none;
 margin: 0 1%;
 cursor: pointer;
 
+`;
+export const NavLiDivI = styled.div`
+position: relative;
 `
+
+export const NavLiDivII = styled.div`
+height: 25px;
+&:hover {
+  color: #FFFFFF;
+text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea, 0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea, 0 0 12px #0e54ea;
+}
+`
+export const NavLiDivIII = styled.div`
+height: 200px;
+width: 100%;
+position: absolute; 
+top: 25px; 
+background: grey;
+border: solid 1px white;
+display: ${(props) => (props.hover ? "block" : "none")};
+
+&:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  right: 50%;
+  top: -23px;
+}
+
+&::after {
+
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid grey;
+  right: 50%;
+  top: -18px;
+}
+
+
+
+          
+
+`;
 
 
 
@@ -162,12 +211,24 @@ width: 10%;
 display: flex;
 justify-content: space-between;
 `
-export const Flag = styled.div`
+export const FlagEn = styled.div`
 width: 50%;
 height: 100%;
 background-image: url('./assets/ukIdioma.jpg');
 background-position: center;
 background-size: cover;
-background-repeat: no-repeat
+background-repeat: no-repeat;
+opacity: .5;
+opacity: ${(props) => (props.switch ? ".5" : "1")};
+`;
+export const FlagEs = styled.div`
+width: 50%;
+height: 100%;
+background-image: url('./assets/spainIdioma.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+opacity: ${(props) => (props.switch ? "1" : ".5")};
 
-`
+`;
+
