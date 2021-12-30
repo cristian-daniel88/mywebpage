@@ -28,7 +28,7 @@ position: absolute;
 top: 5%;
 right: 0;
 left: 0;
-flex-wrap: wrap;
+flex-wrap: wrap-reverse;
 
 @media screen and (max-width: 900px) {
     
@@ -92,7 +92,7 @@ padding: 3%;
 export const Parrafo = styled.p`
 border-right: ${(props)=> (props.tapping ? '' : 'none' )} ;
 
-color: lightblue;
+color: #abf40b;
 `
 
 export const TouchPad = styled.div`
@@ -100,7 +100,6 @@ width: 70%;
 height: 25%;
 position: absolute;
 background-color: black;
-
 top: 62%;
 right: 18%;
 
@@ -108,12 +107,67 @@ right: 18%;
 
 // Box 2
 export const Box2 = styled.div`
+display: ${(props) => (!props.load ? "flex" : "none")};
+justify-content: center;
+align-items: center;
+flex-direction: column;
 width: 50%;
 height: auto;
-/* border: solid 1px white; */
+border: solid 1px white;
 min-width: 265px;
-display: ${(props)=> (props.load ? 'none' : 'block' ) };
+@media screen and (max-width: 600px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+
+
 `;
+
+export const HiThereDiv = styled.div`
+width: 90%;
+margin-bottom: 10%;
+
+
+`
+
+export const HiThereH3 = styled.h3`
+text-align: center;
+color: #fff;
+font-size: 150%;
+
+`
+
+export const HireMeDiv = styled.div`
+width: auto;
+
+text-align: center;
+
+`
+
+export const HireMeButton = styled.button`
+border: none;
+background-color: transparent;
+color: #fff;
+cursor: pointer;
+
+background: #500779;
+border-radius: 5px;
+padding: .4%;
+
+
+&:hover , &:focus {
+    color: #ffffff;
+    
+
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  
+  }
+`
 
 
 

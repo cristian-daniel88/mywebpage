@@ -119,6 +119,11 @@ export const NavLi = styled.li`
   list-style: none;
   margin: 0 1%;
   cursor: pointer;
+  border: none; 
+
+  &:focus {
+    border: none;
+  }
 `;
 export const NavLiDivI = styled.div`
   position: relative;
@@ -129,12 +134,13 @@ export const NavLiDivII = styled.button                 `
   border: none;
   color: #ffffff;
   background-color: transparent;
-  cursor: pointer;
-  &:hover {
+  cursor: pointer;  
+  &:hover, &:focus{
     color: #ffffff;
     text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
       0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
       0 0 12px #0e54ea;
+      border: none;
   }
 `;
 export const NavLiDivIII = styled.div`

@@ -6,6 +6,10 @@ import {
   Box2,
   Computer,
   ComputerContainer,
+  HireMeButton,
+  HireMeDiv,
+  HiThereDiv,
+  HiThereH3,
   Loading,
   Parrafo,
   TextComputer,
@@ -22,36 +26,25 @@ function HomeBody() {
   const [tapping3, setTapping3] = useState(true)
 
   let mypromise = function functionOne(testInput) {
-    console.log("Entered function");
-    new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (loading) {
-          resolve(setLoading(false));
-        } else {
-          reject("Rejected");
-        }
+     
+          setLoading(false);
+      
       }, 2000);
-    });
-
-    new Promise((resolve, reject) => {
+ 
       setTimeout(() => {
-        if (loading) {
-          resolve(setTapipping(false), setTapping2(true));
-        } else {
-          reject("Rejected");
-        }
+       
+          setTapipping(false); setTapping2(true);
+     
       }, 10000);
-    });
 
-    new Promise((resolve, reject) => {
+
       setTimeout(() => {
-        if (loading) {
-          resolve(setTapping2(false), setTapping3(false));
-        } else {
-          reject("Rejected");
-        }
+     
+      setTapping2(false); setTapping3(false)
+       
       }, 18000);
-    });
+   
   };
 
   useEffect(() => {
@@ -73,7 +66,7 @@ function HomeBody() {
           <ComputerContainer>
             <Computer src="./assets/laptop.png" />
             <TextComputer>
-              export const fullStack = {curlyBraces1}
+              <div style={{'display': 'inline', 'color':'violet'}}>export</div> <div style={{'display': 'inline', 'color':'#8383cf'}}>const</div> <div style={{'display': 'inline', 'color': 'lightblue'}}>fullStack</div> = {curlyBraces1}
               <Parrafo className="parrafo" tapping={tapping}>
               name:<b style={{'fontWeight': '200', color:'orange'}}> 'cristian daniel'</b><b style={{'fontWeight': '200', 'color':'white'}}>,</b>
               </Parrafo>
@@ -84,7 +77,21 @@ function HomeBody() {
             <TouchPad />
           </ComputerContainer>
         </Box1>
-        <Box2></Box2>
+          
+
+        <Box2 load={loading}>
+          <HiThereDiv>
+              <HiThereH3>
+                Hi there, welcome to my webpage
+              </HiThereH3>
+          </HiThereDiv>
+
+          <HireMeDiv>
+            <HireMeButton>
+              See my profile
+            </HireMeButton>
+          </HireMeDiv>
+        </Box2>
       </BodyContainer>
     </Body>
   );
