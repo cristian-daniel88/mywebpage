@@ -42,6 +42,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 display: ${(props)=> (props.load ? 'none' : 'block' ) };
+
+
 @media screen and (max-width: 900px) {
     
     width: 100%;
@@ -54,6 +56,12 @@ height: auto;
 /* border: solid 1px white; */
 position: relative;
 z-index: 10;
+@media screen and (max-width: 376px) {
+   width: 90%;
+  }
+@media only screen and (max-width: 541px) and (min-width: 539px)  {
+  width: 500px;
+}
 `;
 
 export const Computer = styled.img`
@@ -61,6 +69,10 @@ width: 95%;
 filter: invert(0.9);
 z-index: 20;
 position: relative;
+@media screen and (max-width: 376px) {
+    width: 112%;
+    
+  }
 `
 
 export const TextComputer= styled.div`
@@ -74,6 +86,11 @@ top: 15%;
 left: 15%;
 background-color: black;
 padding: 3%;
+
+@media screen and (max-width: 376px) {
+    width: 80%;
+    font-size: 11px;
+  }
 `
 export const Parrafo = styled.p`
 border-right: ${(props)=> (props.tapping ? '' : 'none' )} ;
