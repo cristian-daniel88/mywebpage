@@ -6,7 +6,8 @@ import { enNavItem1, enNavItem2, enNavItem3, enNavItem4 } from "../../translate/
 
 
 import {
-  ButtonTranslate,
+  ButtonTranslateEn,
+  ButtonTranslateEs,
   Details,
   FlagEn,
   FlagEs,
@@ -66,7 +67,7 @@ function NavBar() {
         <NavUl>
          
           <NavLi>
-            <NavLiDivI>
+            <NavLiDivI>          
               <NavLiDivII> {language ? enNavItem1 : esNavItem1}</NavLiDivII>
                <NavLiDivIII>
                   home
@@ -99,8 +100,8 @@ function NavBar() {
                </NavLiDivIII>
             </NavLiDivI>
           </NavLi>
-          <ButtonTranslate onClick={switchLanguage} disabled={language}><FlagEn switch={language}/>En</ButtonTranslate>
-          <ButtonTranslate onClick={switchLanguage} disabled={!language}><FlagEs switch={language}/>Es</ButtonTranslate>
+          <ButtonTranslateEn onClick={switchLanguage} disabled={language} switch={language}><FlagEn/>En</ButtonTranslateEn>
+          <ButtonTranslateEs onClick={switchLanguage} disabled={!language} switch={language}><FlagEs/>Es</ButtonTranslateEs>
         </NavUl>   
       </Nav>
 
