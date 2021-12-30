@@ -2,7 +2,7 @@
 .ring
 {
   position:absolute;
-  top:40%;
+  top:25%;
   left:50%;
   transform:translate(-50%,-50%);
   width:150px;
@@ -104,15 +104,17 @@ span:before
 
 
 
-p {
-  width: 0;
+
+.parrafo {
+  width: 0; 
   overflow: hidden;
   white-space: nowrap;
-  font-size: 120%;
-  margin: 0 auto;
+  font-size: 90%;
+
   font-family: "Courier New";
   border-right: 0.15em solid #18bdec;
   animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  /* border-right: none; */
 }
 @keyframes typing {
   from {
@@ -127,3 +129,113 @@ p {
     border-color: transparent;
   }
 }
+
+
+
+
+/** key**/
+
+
+@media screen and (min-width: 100px) {
+  .parrafo {
+    width: 0; 
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    /* border-right: none; */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+ 
+}
+
+
+
+@media screen and (min-width: 500px) {
+  .parrafo {
+    width: 0; 
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    /* border-right: none; */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+ 
+}
+
+@media screen and (min-width: 889px) {
+  .parrafo {
+    width: 0; 
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    /* border-right: none; */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+ 
+}
+
+@media screen and (min-width: 1380px) {
+  .parrafo {
+    width: 0; 
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    /* border-right: none; */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+

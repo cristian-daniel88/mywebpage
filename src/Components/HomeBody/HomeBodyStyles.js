@@ -15,6 +15,8 @@ background-color: black;
 export const Loading = styled.div`
 display: ${(props) => (props.load ? "block" : "none")};
 
+
+
 `
 
 export const BodyContainer = styled.div`
@@ -45,7 +47,7 @@ flex-wrap: wrap;
 export const Box1 = styled.div`
 width: 50%;
 height: auto;
-border: solid 1px white;
+/* border: solid 1px white; */
 display: flex;
 justify-content: center;
 align-items: center;
@@ -60,9 +62,10 @@ export const ComputerContainer = styled.div`
 
 width: 95%;
 height: auto;
-border: solid 1px white;
+/* border: solid 1px white; */
 position: relative;
 z-index: 10;
+
 `;
 
 export const Computer = styled.img`
@@ -85,8 +88,11 @@ top: 15%;
 left: 15%;
 background-color: black;
 padding: 3%;
+`
+export const Parrafo = styled.p`
+border-right: ${(props)=> (props.tapping ? '' : 'none' )} ;
 
-
+color: lightblue;
 `
 
 export const TouchPad = styled.div`
@@ -104,7 +110,7 @@ right: 18%;
 export const Box2 = styled.div`
 width: 50%;
 height: auto;
-border: solid 1px white;
+/* border: solid 1px white; */
 min-width: 265px;
 display: ${(props)=> (props.load ? 'none' : 'block' ) };
 `;
