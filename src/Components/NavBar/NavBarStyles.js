@@ -183,7 +183,7 @@ export const ButtonTranslateEn = styled.button`
   cursor: ${(props) => (props.switch ? "" : "pointer")};
   background-color: transparent;
   
-  padding: 1px;
+  padding: 1px 3px;
   color: #fff;
   margin: 0 5px;
   width: 10%;
@@ -195,7 +195,7 @@ export const ButtonTranslateEn = styled.button`
 export const ButtonTranslateEs = styled.button`
   cursor: ${(props) => (!props.switch ? "" : "pointer")};
   background-color: transparent;
-  padding: 1px;
+  padding: 1px 3px;
   color: #fff;
   margin: 0 5px;
   width: 10%;

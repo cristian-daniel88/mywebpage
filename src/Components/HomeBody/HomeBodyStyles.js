@@ -53,7 +53,7 @@ display: ${(props)=> (props.load ? 'none' : 'block' ) };
 export const ComputerContainer = styled.div`
 width: 95%;
 height: auto;
-/* border: solid 1px white; */
+
 position: relative;
 z-index: 10;
 @media screen and (max-width: 376px) {
@@ -91,6 +91,12 @@ padding: 3%;
     width: 80%;
     font-size: 11px;
   }
+  @media only screen and (max-width: 384px) and (min-width: 384px)  {
+  font-size: 10px;
+}
+@media only screen and (max-width: 391px) and (min-width: 390px)  {
+  font-size: 10px;
+}
 `
 export const Parrafo = styled.p`
 border-right: ${(props)=> (props.tapping ? '' : 'none' )} ;
@@ -147,8 +153,9 @@ color: #fff;
 cursor: pointer;
 background: #500779;
 border-radius: 5px;
-padding: 8px 3px;
+padding: 8px 10px;
 font-size: 150%;
+border: solid 1px grey;
 &:hover , &:focus {
     color: #ffffff;
     
