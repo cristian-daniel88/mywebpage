@@ -27,7 +27,9 @@ function HomeBody() {
             <ComputerContainer>
               <Computer src="./assets/laptop.png"/>
               <TextComputer>
-                <p>Welcome to My Web Page </p>
+                <p className="line anim-typewriter" >Welcome to My Web Page            npm start</p>
+                
+
               </TextComputer>
               <TouchPad/>
             </ComputerContainer>
