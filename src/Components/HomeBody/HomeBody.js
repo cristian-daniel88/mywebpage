@@ -16,8 +16,12 @@ import {
   TouchPad,
 } from "./HomeBodyStyles";
 import "./homeBodyAnimations.css";
+import { hiThereUk, myProfileUk } from "../../translate/english";
+import { hiThereEs, myProfileES } from "../../translate/spanish";
+import { useSelector } from "react-redux";
 
 function HomeBody() {
+  const language = useSelector(state => state.language.english)
   const curlyBraces1 = '{'
   const curlyBraces2 = '};'
   const [loading, setLoading] = useState(true);
@@ -82,13 +86,13 @@ function HomeBody() {
         <Box2 load={loading}>
           <HiThereDiv>
               <HiThereH3>
-                Hi there, welcome to my webpage
+              {language ? hiThereUk : hiThereEs}
               </HiThereH3>
           </HiThereDiv>
 
           <HireMeDiv>
             <HireMeButton>
-              See my profile
+              {language ? myProfileUk : myProfileES}
             </HireMeButton>
           </HireMeDiv>
         </Box2>

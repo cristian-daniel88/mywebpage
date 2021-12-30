@@ -60,6 +60,7 @@ export const Name = styled.h1`
   margin-bottom: 3%;
   font-weight: 400;
   letter-spacing: 1px;
+  user-select: text;
   cursor: pointer;
   @media screen and (max-width: 600px) {
     font-size: 100%;
