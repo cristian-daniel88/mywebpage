@@ -78,7 +78,7 @@ function HomeBody() {
               name:<b style={{'fontWeight': '200', color:'orange'}}> 'cristian daniel'</b><b style={{'fontWeight': '200', 'color':'white'}}>,</b>
               </Parrafo>
               {!tapping && (<Parrafo className="parrafo" tapping={tapping2}>lastName:<b style={{'fontWeight': '200', color:'orange'}}>'herrera'</b><b style={{'fontWeight': '200', 'color':'white'}}>,</b></Parrafo>)}
-              {!tapping3 && (<Parrafo className="parrafo">profession:<b style={{'fontWeight': '200', color:'orange'}}> 'web developer'</b></Parrafo>)}
+              {!tapping3 && (<Parrafo className="parrafo" tapping={true}>profession:<b style={{'fontWeight': '200', color:'orange'}}> 'web developer'</b></Parrafo>)}
               {curlyBraces2}
             </TextComputer>
             <TouchPad />

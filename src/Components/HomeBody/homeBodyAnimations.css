@@ -207,6 +207,29 @@ span:before
  
 }
 
+@media screen and (min-width: 915px) {
+  .parrafo {
+    width: 0; 
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    /* border-right: none; */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 90%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+ 
+}
+
 @media screen and (min-width: 1380px) {
   .parrafo {
     width: 0; 
