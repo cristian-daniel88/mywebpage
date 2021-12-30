@@ -7,6 +7,14 @@ position: absolute;
 top: 5%;
 background-image: url('./assets/techdigi3.jpg'); 
 background-color: black;
+
+@media only screen and (max-width: 811px) and (min-width: 809px)  {
+  top: -10%;
+}
+
+@media only screen and (max-width: 801px) and (min-width: 799px)  {
+  top: -10%;
+}
 `;
 
 export const Loading = styled.div`
@@ -18,6 +26,7 @@ display: ${(props) => (!props.load ? "block" : "none")};
 width: 90%;
 margin: auto;
 display: flex;
+flex-direction: row-reverse;
 position: absolute;
 top: 5%;
 right: 0;
@@ -138,7 +147,7 @@ margin-bottom: 10%;
 export const HiThereH3 = styled.h3`
 text-align: center;
 color: #fff;
-font-size: 150%;
+font-size: 200%;
 `
 
 export const HireMeDiv = styled.div`
