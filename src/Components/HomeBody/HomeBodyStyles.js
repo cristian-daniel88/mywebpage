@@ -154,7 +154,7 @@ cursor: pointer;
 
 background: #500779;
 border-radius: 5px;
-padding: .4%;
+padding: 8px 3px;
 
 
 &:hover , &:focus {
