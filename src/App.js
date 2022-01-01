@@ -3,6 +3,8 @@ import NavBar from './Components/NavBar/NavBar';
 import { Switch, Route } from "react-router-dom"
 import Home from './Pages/Home';
 import { GlobalStyles } from './styles/GlobalStyles';
+import Footer from './Components/Footer/Footer.js';
+import Top from './Components/Top/Top';
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
     <GlobalStyles/>
     
     <NavBar/>
-    
+    <Top/>
     <Switch>
 
 
@@ -22,6 +24,7 @@ function App() {
     </Switch>
 
 
+    <Footer/>
     </>
   );
 }

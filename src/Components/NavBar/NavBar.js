@@ -13,6 +13,7 @@ import {
   FlagEs,
   H2,
   MenuBurguer,
+  MenuBurguerBotton,
   Name,
   Nav,
   NavBarContainer,
@@ -58,7 +59,10 @@ function NavBar() {
 
           <Position>
             <H2>Web Developer</H2>
+            <MenuBurguerBotton>
+              
             <MenuBurguer  onClick={toggleMenu}/>
+            </MenuBurguerBotton>
           </Position>
         </Details>
       </Profile>

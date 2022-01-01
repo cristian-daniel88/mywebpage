@@ -1,20 +1,15 @@
 import styled from "styled-components";
 
-export const Body = styled.div`
+export const Body = styled.section`
 width: 100%;
-height: 150vh;
-position: absolute;
-top: 5%;
+height: auto;
+;
+position: relative;
+
 background-image: url('./assets/techdigi3.jpg'); 
 background-color: black;
 
-@media only screen and (max-width: 811px) and (min-width: 809px)  {
-  top: -10%;
-}
 
-@media only screen and (max-width: 801px) and (min-width: 799px)  {
-  top: -10%;
-}
 `;
 
 export const Loading = styled.div`
@@ -27,26 +22,18 @@ width: 90%;
 margin: auto;
 display: flex;
 flex-direction: row-reverse;
-position: absolute;
+
 top: 5%;
 right: 0;
 left: 0;
 flex-wrap: wrap-reverse;
-@media screen and (max-width: 900px) {
-    
-    top: 20%;
-  }
-  @media screen and (max-width: 600px) {
-    
-    top: 10%;
-  }
+
 `
 
 // Box 1
 export const Box1 = styled.div`
 width: 50%;
-height: auto;
-/* border: solid 1px white; */
+
 display: flex;
 justify-content: center;
 align-items: center;

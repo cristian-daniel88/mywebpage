@@ -20,6 +20,7 @@ import { hiThereUk, myProfileUk } from "../../translate/english";
 import { hiThereEs, myProfileES } from "../../translate/spanish";
 import { useSelector } from "react-redux";
 
+
 function HomeBody() {
   const language = useSelector(state => state.language.english)
   const curlyBraces1 = '{'
@@ -55,6 +56,7 @@ function HomeBody() {
     mypromise();
   }, []);
   return (
+    <>
     <Body>
       <Loading load={loading}>
         <div>
@@ -97,7 +99,11 @@ function HomeBody() {
           </HireMeDiv>
         </Box2>
       </BodyContainer>
+
+
     </Body>
+     
+    </>
   );
 }
 
