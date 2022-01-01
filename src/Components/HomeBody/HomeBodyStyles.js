@@ -32,6 +32,10 @@ background-color: black;
 export const Loading = styled.div`
 display: ${(props) => (props.load ? "block" : "none")};
 height: 100vh;
+
+@media only screen and (max-width: 3000px) and (min-width: 900px)  {
+  height: auto;
+}
 `
 
 export const BodyContainer = styled.div`

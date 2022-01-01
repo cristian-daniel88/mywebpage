@@ -36,7 +36,15 @@ background: transparent;
 border: none;
 min-width: 170px;
 margin-bottom: 3%;
+border:none;
 
+ 
+
+`
+
+export const AFooter =styled.a`
+color: #ffffff;
+font-size: clamp(0.8rem, 5vw, 0.8rem);
 &:hover , &:focus {
     color: #ffffff;
     
@@ -46,12 +54,6 @@ margin-bottom: 3%;
       border: none;
   
   }     
-
-`
-
-export const AFooter =styled.a`
-color: #ffffff;
-font-size: clamp(0.8rem, 5vw, 0.8rem);
 
 
 
