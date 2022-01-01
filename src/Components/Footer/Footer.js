@@ -12,7 +12,7 @@ function Footer() {
            
                 <ButtonFooter>
                 <AFooter href={language ? contactEn : contactEs} target='_blank'>
-                 <WhatApp/>:&nbsp; +44 7864 069428
+                 <WhatApp/>&nbsp; +44 7864 069428
                  </AFooter>
                 </ButtonFooter>
           
@@ -21,13 +21,13 @@ function Footer() {
 
                 <ButtonFooter>                  
                 <AFooter href='https://github.com/cristian-daniel88' target='_blank'>
-                    <GitHub/>: &nbsp; https://github.com/cristian-daniel88       
+                    <GitHub/>&nbsp; https://github.com/cristian-daniel88       
                 </AFooter>
                 </ButtonFooter>
 
                 <ButtonFooter>
                 <AFooter href='https://www.linkedin.com/in/cristian-daniel-herrera-7a2794a9/' target='_blank'>
-                <Linkendin/>: &nbsp; https://www.linkedin.com/in/cristian-daniel-herrera-7a2794a9/
+                <Linkendin/>&nbsp; https://www.linkedin.com/in/cristian-daniel-herrera-7a2794a9/
                 </AFooter>
                 </ButtonFooter>
             </FooterDiv>
