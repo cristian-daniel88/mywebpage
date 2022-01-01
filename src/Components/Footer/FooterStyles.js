@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import styled from "styled-components";
 
 
@@ -60,19 +60,26 @@ font-size: clamp(0.8rem, 5vw, 0.8rem);
 
 
 export const WhatApp = styled(FaWhatsapp)`
-
+border-radius: 50%;
+font-size: 1.5em;
+background: green;
 `;
 
 
 
-export const Linkendin = styled(FaLinkedin)`
+export const Linkendin = styled(FaLinkedinIn)`
+font-size: 1.5em;
+background: #0077B5;
+border-radius: 2px;
+border: none;
+color: white;
 
 `;
 
 
 
 export const GitHub = styled(FaGithub)`
-
+font-size: 1.5em;
 `
 
 
