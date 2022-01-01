@@ -3,17 +3,35 @@ import styled from "styled-components";
 export const Body = styled.section`
 width: 100%;
 height: auto;
-;
+
+
 position: relative;
 
 background-image: url('./assets/techdigi3.jpg'); 
 background-color: black;
+
+@media only screen and (max-width: 1024px) and (min-width: 1024px)  {
+  height: 70vh;
+}
+
+@media only screen and (max-width: 950px) and (min-width: 894px)  {
+  height: 110vh;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 800px)  {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 428px) and (min-width: 360px)  {
+  height: 70vh;
+}
 
 
 `;
 
 export const Loading = styled.div`
 display: ${(props) => (props.load ? "block" : "none")};
+height: 100vh;
 `
 
 export const BodyContainer = styled.div`

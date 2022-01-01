@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TopDiv = styled.div`
-height: 100px;
+height: 20vh;
 background: black;
 
 @media only screen and (max-width: 899px) and (min-width: 600px)  {

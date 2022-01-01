@@ -7,7 +7,9 @@ color: black;
 position: relative;
 background: black;
 width: 100%;
-height: 25vh
+height: 150px;
+
+
 
 
 `
@@ -22,7 +24,9 @@ display: flex;
 justify-content: space-around;
 flex-wrap: wrap;
 border-top: solid 1px #ffffff;
-padding-top: 1%;
+padding-top: 50px;
+
+
 
 
 `
@@ -30,7 +34,7 @@ padding-top: 1%;
 export const ButtonFooter = styled.button`
 background: transparent;
 border: none;
-min-width: 150px;
+min-width: 170px;
 margin-bottom: 3%;
 
 &:hover , &:focus {
@@ -47,6 +51,7 @@ margin-bottom: 3%;
 
 export const AFooter =styled.a`
 color: #ffffff;
+font-size: clamp(0.8rem, 5vw, 0.8rem);
 
 
 
