@@ -1,11 +1,15 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { burguerMenu } from '../../redux/burguerMenu/burgerMenuActions';
 import { ButtonBurguer, ButtonBurguerContainer, LiBurguer, Menu, MenuContainer, NavBurguer, UlBurguer } from './ToggleMenuStyles'
 
 function ToggleMenu() {
     const toggle = useSelector(state => state.burger.toggle);
-    console.log(toggle)
+    const dispatch = useDispatch()
 
+    const toggleMenu = () => {
+        dispatch(burguerMenu())
+    }
 
     return (
         <Menu toggle={toggle}>
@@ -35,7 +39,7 @@ function ToggleMenu() {
                         </UlBurguer>
 
                         <ButtonBurguerContainer>
-                            <ButtonBurguer/>
+                            <ButtonBurguer onClick={toggleMenu}/>
                               
                     </ButtonBurguerContainer>
                     </NavBurguer>
