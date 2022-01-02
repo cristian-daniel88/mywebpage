@@ -88,15 +88,7 @@ border: none;
 color: #ffffff;
 height: auto;
 
-&:hover , &:focus {
-    color: #ffffff;
-    
-      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
-      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
-      0 0 12px #0e54ea;
-      border: none;
-  
-  }
+
 `
 
 export const MenuBurguer = styled(FaBars)`
@@ -110,6 +102,8 @@ export const MenuBurguer = styled(FaBars)`
     display: block;
     margin-top: 5%;
   }
+
+  
 `;
 
 // Nav

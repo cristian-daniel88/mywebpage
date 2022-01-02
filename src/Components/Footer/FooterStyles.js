@@ -76,12 +76,9 @@ margin-bottom: 20px;
 
 
 `
-
-
-
 export const WhatApp = styled(FaWhatsapp)`
 border-radius: 50%;
-font-size: 2.5em;
+font-size: 2em;
 background: green;
 margin: 0 20px;
 &:hover , &:focus {
@@ -98,7 +95,7 @@ margin: 0 20px;
 
 
 export const Linkendin = styled(FaLinkedinIn)`
-font-size: 2.5em;
+font-size: 2em;
 margin: 0 20px;
 background: #0077B5;
 border-radius: 2px;
@@ -120,7 +117,7 @@ color: white;
 
 
 export const GitHub = styled(FaGithub)`
-font-size: 2.5em;
+font-size: 2em;
 margin: 0 20px;
 border-radius: 50%;
 
@@ -139,7 +136,7 @@ border-radius: 50%;
 
 export const Email = styled(FaEnvelope)`
 color: white;
-font-size: 2.5em;
+font-size: 2em;
 margin: 0 20px;
 cursor: pointer;
 

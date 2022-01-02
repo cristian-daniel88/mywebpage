@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Footer from './Components/Footer/Footer.js';
 import Top from './Components/Top/Top';
+import ToggleMenu from './Components/ToggleMenu/ToggleMenu';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <GlobalStyles/>
     
     <NavBar/>
+   <ToggleMenu/>
     <Top/>
     <Switch>
 
@@ -22,7 +24,6 @@ function App() {
 
 
     </Switch>
-
 
     <Footer/>
     </>
