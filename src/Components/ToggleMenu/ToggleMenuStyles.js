@@ -20,7 +20,7 @@ z-index: 11;
 export const MenuContainer = styled.div`
 height: 100%;
 width: 100%;
-border: solid 1px white;
+
 `
 
 export const NavBurguer = styled.nav`
@@ -96,7 +96,7 @@ export const ButtonMenuLanguage = styled.button`
   justify-content: space-between;
   opacity: ${(props) => (props.switch ? ".3" : "1")};
 
-  &:hover, &:focus{
+  &:hover{
     color: #ffffff;
     text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
       0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
