@@ -59,9 +59,9 @@ function NavBar() {
 
           <Position>
             <H2>Web Developer</H2>
-            <MenuBurguerBotton>
+            <MenuBurguerBotton onClick={toggleMenu}>
               
-            <MenuBurguer  onClick={toggleMenu}/>
+            <MenuBurguer  />
             </MenuBurguerBotton>
           </Position>
         </Details>
