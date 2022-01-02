@@ -21,10 +21,10 @@ width: 95%;
 margin: auto;
 
 display: flex;
-justify-content: space-around;
+justify-content: center;
 flex-wrap: wrap;
 border-top: solid 1px #ffffff;
-padding-top: 50px;
+padding-top: 30px;
 
 
 
@@ -35,17 +35,9 @@ padding-top: 50px;
 export const ButtonFooter = styled.button`
 background: transparent;
 border: none;
-min-width: 170px;
+
 margin-bottom: 3%;
-border:none;
 
- 
-
-`
-
-export const AFooter =styled.a`
-color: #ffffff;
-font-size: clamp(0.8rem, 5vw, 0.8rem);
 
 &:hover , &:focus {
     color: #ffffff;
@@ -55,7 +47,31 @@ font-size: clamp(0.8rem, 5vw, 0.8rem);
       0 0 12px #0e54ea;
       border: none;
   
-  }     
+  }  
+
+ 
+
+`
+
+export const AFooter =styled.a`
+color: #ffffff;
+margin-bottom: 20px;
+
+
+
+
+ &:focus {
+    color: #ffffff;
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+      outline: none;
+  
+  }  
+
+ 
 
 
 
@@ -65,25 +81,58 @@ font-size: clamp(0.8rem, 5vw, 0.8rem);
 
 export const WhatApp = styled(FaWhatsapp)`
 border-radius: 50%;
-font-size: 1.5em;
+font-size: 2.5em;
 background: green;
+margin: 0 20px;
+&:hover , &:focus {
+    color: #ffffff;
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  
+  }  
 `;
 
 
 
 export const Linkendin = styled(FaLinkedinIn)`
-font-size: 1.5em;
+font-size: 2.5em;
+margin: 0 20px;
 background: #0077B5;
 border-radius: 2px;
 border: none;
 color: white;
+
+&:hover , &:focus {
+    color: #ffffff;
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  
+  }  
 
 `;
 
 
 
 export const GitHub = styled(FaGithub)`
-font-size: 1.5em;
+font-size: 2.5em;
+margin: 0 20px;
+border-radius: 50%;
+
+&:hover , &:focus {
+    color: #ffffff;
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  
+  }  
 `
 
 
@@ -92,16 +141,17 @@ width: 95%;
 margin: auto;
 
 display: flex;
-justify-content: space-around;
+justify-content: center;
 flex-wrap: wrap;
 color: white;
 padding-bottom: 50px;
 
 
+`
 
-
-
-
+export const Copyright = styled.p`
+text-align: center;
+user-select: text;
 `
 
 
