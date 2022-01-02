@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 
 export const Menu = styled.div`
-display: ${(props) => (props.toggle ? "block" : "none")};
+
 width: 70%;
 height: 100vh;
 background-color: rgb(16 3 3 / 80%);
 position: absolute;
 z-index: 11;
+
+transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")};
+  transition: transform 0.5s ease-in-out;
 
 @media screen and (min-width: 600px) {
     display: none;
@@ -43,6 +46,8 @@ export const LiBurguer = styled.li`
 color: white;
 display: block;
 margin: 20px;
+
+
 `;
 
 export  const ButtonBurguerContainer = styled.div`
@@ -112,6 +117,7 @@ border: none;
 background-color: transparent;
 color: #fff;
 font-size: 1.3rem;
+cursor: pointer;
 &:hover, &:focus{
     color: #ffffff;
     text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
