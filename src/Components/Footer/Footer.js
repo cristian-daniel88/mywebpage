@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { contactEn, copyrightEn } from '../../translate/english'
 import { contactEs, copyrightEs } from '../../translate/spanish'
-import { AFooter, FooterContainer, FooterDiv, GitHub, Linkendin,  WhatApp, FooterDiv2, Copyright } from './FooterStyles'
+import { AFooter, FooterContainer, FooterDiv, GitHub, Linkendin,  WhatApp, FooterDiv2, Copyright, Email, ButtonFooter } from './FooterStyles'
 
 function Footer() {
     const language = useSelector(state => state.language.english)
@@ -29,7 +29,11 @@ function Footer() {
                 <AFooter href='https://www.linkedin.com/in/cristian-daniel-herrera-7a2794a9/' target='_blank'>
                 <Linkendin/>
                 </AFooter>
-               
+                
+                <ButtonFooter>
+
+                 <Email/>
+                </ButtonFooter>
                
             </FooterDiv>
             

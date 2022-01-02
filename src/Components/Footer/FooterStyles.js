@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FaAmericanSignLanguageInterpreting, FaEnvelope, FaGithub,  FaLinkedinIn,  FaWhatsapp } from "react-icons/fa";
 import styled from "styled-components";
 
 
@@ -36,10 +36,10 @@ export const ButtonFooter = styled.button`
 background: transparent;
 border: none;
 
-margin-bottom: 3%;
+margin-bottom: 20px;
 
 
-&:hover , &:focus {
+ &:focus {
     color: #ffffff;
     
       box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
@@ -133,6 +133,25 @@ border-radius: 50%;
       border: none;
   
   }  
+`
+
+
+
+export const Email = styled(FaEnvelope)`
+color: white;
+font-size: 2.5em;
+margin: 0 20px;
+cursor: pointer;
+
+
+&:hover , &:focus {
+    color: #ffffff;
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+}
 `
 
 
