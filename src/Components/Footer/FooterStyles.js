@@ -48,14 +48,6 @@ export const AFooter =styled.a`
 color: #ffffff;
 margin-bottom: 20px;
 
-
-
-
-
- 
-
-
-
 `
 export const WhatApp = styled(FaWhatsapp)`
 border-radius: 50%;

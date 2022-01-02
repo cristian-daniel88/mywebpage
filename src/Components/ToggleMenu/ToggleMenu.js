@@ -53,13 +53,13 @@ function ToggleMenu() {
                   </SummaryLanguage>
 
                     <ButtonMenuLanguage disabled={language} switch={language} onClick={switchLanguage}>
-                        <img src="./assets/ukIdioma.jpg" width={'25px'}/>
+                        <img src="./assets/ukIdioma.jpg" width={'25px'}/>&nbsp;
                         {language ? enNavItem6 : esNavItem6}
                     </ButtonMenuLanguage>
 
                     
                     <ButtonMenuLanguage disabled={!language} switch={!language} onClick={switchLanguage}>
-                        <img src="./assets/spainIdioma.png" width={'25px'}/>
+                        <img src="./assets/spainIdioma.png" width={'25px'}/>&nbsp;
                         {language ? enNavItem7 : esNavItem7}
                     </ButtonMenuLanguage>
 

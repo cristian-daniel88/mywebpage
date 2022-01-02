@@ -135,6 +135,7 @@ export const NavLiDivII = styled.button                 `
   border: none;
   color: #ffffff;
   background-color: transparent;
+  font-size: 1.3em;
   cursor: pointer;  
   &:hover, &:focus{
     color: #ffffff;
