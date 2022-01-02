@@ -7,7 +7,7 @@ color: black;
 position: relative;
 background: black;
 width: 100%;
-height: 150px;
+height: auto;
 
 
 
@@ -29,6 +29,7 @@ padding-top: 50px;
 
 
 
+
 `
 
 export const ButtonFooter = styled.button`
@@ -45,6 +46,7 @@ border:none;
 export const AFooter =styled.a`
 color: #ffffff;
 font-size: clamp(0.8rem, 5vw, 0.8rem);
+
 &:hover , &:focus {
     color: #ffffff;
     
@@ -82,6 +84,24 @@ color: white;
 
 export const GitHub = styled(FaGithub)`
 font-size: 1.5em;
+`
+
+
+export const FooterDiv2 = styled.div`
+width: 95%;
+margin: auto;
+
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+color: white;
+padding-bottom: 50px;
+
+
+
+
+
+
 `
 
 
