@@ -60,6 +60,8 @@ color: white;
 font-size: 2em;
 transform: rotate(90deg);
 margin: 5px;
+cursor: pointer;
+
 `;
 
 
