@@ -10,7 +10,6 @@ export const NavBarContainer = styled.header`
   position: fixed;
   flex-wrap: wrap;
   z-index: 100;
-
   @media screen and (max-width: 600px) {
     padding: 5px 1%;
   }
@@ -19,18 +18,15 @@ export const NavBarContainer = styled.header`
 
 export const Profile = styled.div`
   width: 50%;
-
   display: flex;
   border-bottom: solid 1px white;
   padding-bottom: 5px;
-
   @media screen and (max-width: 900px) {
     width: 100%;
     border-bottom: none;
     padding-bottom: 5px;
     
   }
-
   @media screen and (max-width: 600px) {
      border-bottom: solid 1px white; 
      
@@ -45,7 +41,6 @@ export const PhotoContainer = styled.div`
   background-size: cover;
   border: solid 4px white;
   cursor: pointer;
-
   @media screen and (max-width: 600px) {
     margin-top: 5px;
   }
@@ -75,7 +70,6 @@ export const Position = styled.div`
 export const H2 = styled.h2`
   font-weight: 100;
   font-size: 100%;
-
   @media screen and (max-width: 600px) {
     font-size: 100%;
     margin-top: 5%;
@@ -87,8 +81,6 @@ background-color: transparent;
 border: none;
 color: #ffffff;
 height: auto;
-
-
 `
 
 export const MenuBurguer = styled(FaBars)`
@@ -102,7 +94,6 @@ export const MenuBurguer = styled(FaBars)`
     display: block;
     margin-top: 5%;
   }
-
   
 `;
 
@@ -111,7 +102,6 @@ export const MenuBurguer = styled(FaBars)`
 export const Nav = styled.nav`
   width: 50%;
    border-bottom: solid 1px white; 
-
   min-width: 300px;
   padding-top: 20px;
   @media screen and (max-width: 900px) {
@@ -132,7 +122,6 @@ export const NavLi = styled.li`
   margin: 0 1%;
   cursor: pointer;
   border: none; 
-
   &:focus {
     border: none;
   }
@@ -163,7 +152,6 @@ export const NavLiDivIII = styled.div`
   background: grey;
   border: solid 1px white;
   display: ${(props) => (props.hover ? "block" : "none")};
-
   &:before {
     content: "";
     width: 0px;
@@ -176,7 +164,6 @@ export const NavLiDivIII = styled.div`
     right: 50%;
     top: -23px;
   }
-
   &::after {
     content: "";
     width: 0px;
@@ -199,7 +186,6 @@ export const ButtonTranslateEn = styled.button`
   color: #fff;
   margin: 0 5px;
   width: 10%;
-
   display: flex;
   justify-content: space-between;
   opacity: ${(props) => (props.switch ? ".3" : "1")};
@@ -211,7 +197,6 @@ export const ButtonTranslateEs = styled.button`
   color: #fff;
   margin: 0 5px;
   width: 10%;
-
   display: flex;
   justify-content: space-between;
   opacity: ${(props) => (!props.switch ? ".3" : "1")};
@@ -224,7 +209,6 @@ export const FlagEn = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   
-
 `;
 export const FlagEs = styled.div`
   width: 50%;
@@ -233,7 +217,4 @@ export const FlagEs = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 `;
-
-

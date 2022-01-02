@@ -2,51 +2,75 @@ import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { burguerMenu } from "../../redux/burguerMenu/burgerMenuActions";
+import { changeLanguage } from "../../redux/language/languageActions";
 import {
   ButtonBurguer,
   ButtonBurguerContainer,
+  ButtonMenu,
+  ButtonMenuLanguage,
+  DetailsLanguage,
   LiBurguer,
   Menu,
   MenuContainer,
   NavBurguer,
+  SummaryLanguage,
   UlBurguer,
 } from "./ToggleMenuStyles";
-import { Simulate } from "react-dom/cjs/react-dom-test-utils.production.min";
+
 
 function ToggleMenu() {
   const toggle = useSelector((state) => state.burger.toggle);
   const dispatch = useDispatch();
+  const language = useSelector(state => state.language.english);
 
   const toggleMenu = () => {
     dispatch(burguerMenu());
   };
+
+  const switchLanguage = () => {
+    dispatch(changeLanguage())
+  }
 
   return (
     <Menu toggle={toggle}>
       <MenuContainer>
         <NavBurguer>
           <UlBurguer>
-            <LiBurguer>Home</LiBurguer>
+            <LiBurguer><ButtonMenu>Home</ButtonMenu></LiBurguer>
 
-            <LiBurguer>About me</LiBurguer>
+            <LiBurguer><ButtonMenu>About me</ButtonMenu></LiBurguer>
 
-            <LiBurguer>Projects</LiBurguer>
+            <LiBurguer><ButtonMenu>Projects</ButtonMenu></LiBurguer>
 
-            <LiBurguer>Contact</LiBurguer>
+            <LiBurguer><ButtonMenu>Contact</ButtonMenu></LiBurguer>
 
             <LiBurguer>
-              <details >
-                <summary>
-                        Language
-                </summary>
+              <DetailsLanguage>
+                  <SummaryLanguage>
+                      Language
+                  </SummaryLanguage>
 
-                
-              </details>
+                    <ButtonMenuLanguage disabled={language} switch={language} onClick={switchLanguage}>
+                        <img src="./assets/ukIdioma.jpg" width={'25px'}/>
+                        English
+                    </ButtonMenuLanguage>
+
+                    
+                    <ButtonMenuLanguage disabled={!language} switch={!language} onClick={switchLanguage}>
+                        <img src="./assets/spainIdioma.png" width={'25px'}/>
+                        English
+                    </ButtonMenuLanguage>
+
+                    
+              </DetailsLanguage>
             </LiBurguer>
           </UlBurguer>
 
           <ButtonBurguerContainer>
+            <ButtonMenu>
+
             <ButtonBurguer onClick={toggleMenu} />
+            </ButtonMenu>
           </ButtonBurguerContainer>
         </NavBurguer>
       </MenuContainer>

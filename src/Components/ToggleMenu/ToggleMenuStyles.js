@@ -63,6 +63,63 @@ margin: 5px;
 cursor: pointer;
 
 `;
+export const DetailsLanguage = styled.details`
+
+`
+
+
+export const SummaryLanguage = styled.summary`
+margin-bottom: 15px;
+font-size : 1.3rem;
+cursor: pointer;
+&:hover, &:focus{
+    color: #ffffff;
+    text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  }
+`
+
+export const ButtonMenuLanguage = styled.button`
+  background-color: transparent;
+  
+  cursor: ${(props) => (props.switch ? "" : "pointer")};
+ 
+  border: none;
+  padding: 1px 3px;
+  color: #fff;
+  margin: 10px 5px;
+ 
+
+  display: flex;
+  justify-content: space-between;
+  opacity: ${(props) => (props.switch ? ".3" : "1")};
+
+  &:hover, &:focus{
+    color: #ffffff;
+    text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  }             
+
+
+`
+
+export const ButtonMenu = styled.button`
+border: none;
+background-color: transparent;
+color: #fff;
+font-size: 1.3rem;
+&:hover, &:focus{
+    color: #ffffff;
+    text-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  }
+`
 
 
 
