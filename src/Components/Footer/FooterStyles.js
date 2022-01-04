@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
 color: black;
-position: relative;
+
 background: black;
 width: 100%;
 height: auto;
