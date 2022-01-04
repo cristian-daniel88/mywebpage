@@ -26,6 +26,11 @@ background-color: black;
   height: 70vh;
 }
 
+@media only screen and (max-width: 500px) and (min-width: 200px)  {
+  height: auto;
+}
+
+
 
 `;
 

@@ -4,13 +4,10 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
 color: black;
-
+position: relative;
 background: black;
 width: 100%;
 height: auto;
-@media only screen and (max-width: 500px) and (min-width: 200px)  {
-  margin-top: 20%;
-}
 
 
 
