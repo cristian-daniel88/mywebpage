@@ -28,11 +28,13 @@ import {
 
 } from "./NavBarStyles";
 import { burguerMenu } from "../../redux/burguerMenu/burgerMenuActions";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function NavBar() {
  const dispatch = useDispatch();
  const language = useSelector(state => state.language.english);
  const [hover, setHover] = useState(false);
+ const history = useHistory()
 
 
   const switchLanguage = () => {
@@ -47,15 +49,23 @@ function NavBar() {
     setHover(!hover)
   }
 
+  const pushProfile = () => {
+      history.push('/profile')
+  }
+
+  const pushHome = () => {
+    history.push('/')
+  }
+
 
 
   return (
     <NavBarContainer>
       <Profile>
-        <PhotoContainer />
+        <PhotoContainer onClick={pushHome}/>
 
         <Details>
-          <Name>Cristian Daniel Herrera</Name>
+          <Name onClick={pushHome}>Cristian Daniel Herrera</Name>
 
           <Position>
             <H2>Web Developer</H2>
@@ -72,14 +82,14 @@ function NavBar() {
          
           <NavLi>
             <NavLiDivI>          
-              <NavLiDivII> {language ? enNavItem1 : esNavItem1}</NavLiDivII>
+              <NavLiDivII onClick={pushHome}> {language ? enNavItem1 : esNavItem1}</NavLiDivII>
                <NavLiDivIII>
                   home
                </NavLiDivIII>
             </NavLiDivI>
           </NavLi>
 
-          <NavLi>
+          <NavLi onClick={pushProfile}>
             <NavLiDivI>
               <NavLiDivII>{language ? enNavItem2 : esNavItem2}</NavLiDivII>
                <NavLiDivIII>

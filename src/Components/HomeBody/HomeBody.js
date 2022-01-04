@@ -19,6 +19,7 @@ import "./homeBodyAnimations.css";
 import { hiThereUk, myProfileUk } from "../../translate/english";
 import { hiThereEs, myProfileES } from "../../translate/spanish";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function HomeBody() {
@@ -28,7 +29,13 @@ function HomeBody() {
   const [loading, setLoading] = useState(true);
   const [tapping, setTapipping] = useState(true);
   const [tapping2, setTapping2] = useState(false);
-  const [tapping3, setTapping3] = useState(true)
+  const [tapping3, setTapping3] = useState(true);
+  const history = useHistory()
+
+  const pushProfile = () => {
+      history.push('/profile')
+  }
+
 
   let mypromise = function functionOne(testInput) {
       setTimeout(() => {
@@ -92,7 +99,7 @@ function HomeBody() {
               </HiThereH3>
           </HiThereDiv>
 
-          <HireMeDiv>
+          <HireMeDiv >
             <HireMeButton>
               {language ? myProfileUk : myProfileES}
             </HireMeButton>
