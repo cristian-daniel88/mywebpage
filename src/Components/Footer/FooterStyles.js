@@ -8,12 +8,7 @@ position: relative;
 background: black;
 width: 100%;
 height: auto;
-
-
-
 `
-
-
 
 export const FooterDiv = styled.div`
 width: 95%;
@@ -25,22 +20,12 @@ flex-wrap: wrap;
 border-top: solid 1px #ffffff;
 padding-top: 30px;
 
-
-
-
-
 `
 
 export const ButtonFooter = styled.button`
 background: transparent;
 border: none;
-
 margin-bottom: 20px;
-
-
-
- 
-
 `
 
 export const AFooter =styled.a`

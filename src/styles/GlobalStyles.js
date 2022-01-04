@@ -19,7 +19,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     height: 100vh;
-    background-color: #fafafa;
+    
 }
 
 a {
