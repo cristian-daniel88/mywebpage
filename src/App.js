@@ -7,13 +7,12 @@ import Footer from './Components/Footer/Footer.js';
 import Top from './Components/Top/Top';
 import ToggleMenu from './Components/ToggleMenu/ToggleMenu';
 import Profile from './Pages/Profile';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 function App() {
- const history = useHistory()
 
 
-      history.push('/')
+
 
   return (
     <>

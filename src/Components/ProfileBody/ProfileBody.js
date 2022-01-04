@@ -32,13 +32,13 @@ function ProfileBody() {
             href="https://ar.linkedin.com/in/cristian-daniel-herrera-7a2794a9"
             target="_blank"
           >
-            Click Here
+            Click here
           </A>
           <br />
           <br />
           <Bold>GitHub: </Bold>
           <A href="https://github.com/cristian-daniel88" target="_blank">
-            Click Here
+            Click here
           </A>
           <br />
           <br />
@@ -57,6 +57,52 @@ function ProfileBody() {
           <br />
           <br />
           <br />
+         
+          <H4>WORK EXPERIENCE:</H4>
+          <br/>
+          <P>
+            I was training at The Bit Cooperative Ltda for two years in Buenos
+            Aires, Argentina. I learned how to use MERN stack to build an
+            e-commerce web page. They offered me a position as a Junior, but
+            unfortunately I couldn't accept because I was about to relocate to
+            the UK
+          </P>
+          <br/>
+          <br/>
+          <Bold>Letter of recommendation: </Bold><A href="https://drive.google.com/file/d/1-U_VUpv24BlGHmunJ5DkQY6Mis9OaMLF/view">Click here</A>
+
+          <br />
+          <br />
+          <br />
+
+        </BoxProfile>
+
+        <BoxProfile>
+          <H4>EDUCATION</H4>
+          <br />
+          <Ul style={{'padding': '0 10%'}}>
+            <Li>
+              Web Development for Beginners (Layout and Starter Javascript
+              course). May 2020 - August 2020, UTN
+            </Li>
+            <br />
+            <Li>
+              Advanced Web Development (Stack MERN). August 2020 – December
+              2021, NucBA
+            </Li>
+            <br />
+            <Li>Udemy (NodeJs). May 2021 - June 2021</Li>
+            <br />
+            <Li>
+              IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs,
+              Postgresql, SQL, PHP, Python, C#, Java, Jquery. August 2021 -
+              April 2022.
+            </Li>
+          </Ul>
+          <br />
+          <br />
+          <br />
+
           <H4>LANGUAGES & FRAMEWORKS </H4>
           <br />
           <Ul>
@@ -70,35 +116,7 @@ function ProfileBody() {
             <Li>SQL</Li>
             <Li>Bootstrap</Li>
           </Ul>
-
-          <br />
-          <br />
-          <br />
-        </BoxProfile>
-
-        <BoxProfile>
-          <H4>EDUCATION</H4>
-          <br/>
-          <Ul>
-            <Li>
-              Web Development for Beginners (Layout and Starter Javascript
-              course). May 2020 - August 2020, UTN
-            </Li>
-            <br />
-            <Li>
-              Advanced Web Development (Stack MERN). August 2020 – December
-              2021, NucBA
-            </Li>
-            <br />
-            <Li>Udemy (NodeJs). May 2021 - June 2021</Li>
-            <br/>
-            <Li>
-              IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs,
-              Postgresql, SQL, PHP, Python, C#, Java, Jquery. August 2021 -
-              April 2022.
-            </Li>
-          </Ul>
-          <br />
+        
         </BoxProfile>
       </ProfileFather>
       <br />

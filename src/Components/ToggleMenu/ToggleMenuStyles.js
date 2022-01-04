@@ -6,7 +6,7 @@ export const Menu = styled.div`
 width: 70%;
 height: 100vh;
 background-color: rgb(16 3 3 / 80%);
-position: absolute;
+position: fixed;
 z-index: 11;
 
 transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")};
