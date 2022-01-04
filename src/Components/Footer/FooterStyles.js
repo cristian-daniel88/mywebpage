@@ -8,7 +8,9 @@ color: black;
 background: black;
 width: 100%;
 height: auto;
-
+@media only screen and (max-width: 400px) and (min-width: 200px)  {
+  height: 70vh;
+}
 
 
 
