@@ -1,4 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { boldEn1, boldEn5, h4En1, h4En2, h4En3, h4En4, h4En5, pEn10, pEn11, pEn4, pEn5, pEn6, pEn8, pEn9 } from "../../translate/english";
+import { boldEs1, boldEs5, h4Es1, h4Es2, h4Es3, h4Es4, h4Es5, pEs10, pEs11, pEs4, pEs5, pEs6, pEs8, pEs9 } from "../../translate/spanish";
 import {
   A,
   Bold,
@@ -12,14 +15,15 @@ import {
 } from "./ProfileBodyStyles";
 
 function ProfileBody() {
+  const language = useSelector(state => state.language.english)
   return (
     <ProfileContainer>
       <ProfileFather>
         <BoxProfile>
-          <H4>PERSONAL INFORMATION</H4>
+          <H4>{language ? h4En1 : h4Es1}</H4>
           <br />
 
-          <Bold>Full-Name: </Bold>
+          <Bold>{language ? boldEn1 : boldEs1}</Bold>
           <P>Cristian Daniel Herrera</P>
           <br />
           <br />
@@ -32,44 +36,34 @@ function ProfileBody() {
             href="https://ar.linkedin.com/in/cristian-daniel-herrera-7a2794a9"
             target="_blank"
           >
-            Click here
+            {language ? pEn4 : pEs4}
           </A>
           <br />
           <br />
           <Bold>GitHub: </Bold>
           <A href="https://github.com/cristian-daniel88" target="_blank">
-            Click here
+          {language ? pEn4 : pEs4}
           </A>
           <br />
           <br />
           <br />
-          <H4>PROFILE</H4>
+          <H4>{language ? h4En2 : h4Es2}</H4>
           <br />
           <P>
-            After working as a professional musician for several years, I am now
-            looking to start a new career as a Programmer and Web Developer. I
-            am an enthusiastic person who is motivated and willing to learn new
-            skills and work as part of a dedicated team. I have recently
-            completed an introductory Programming course and am in the process
-            of completing an Advanced Javascript course. I'm seeking a role
-            where I can apply these newfound skills in a dynamic, practical way.
+            {language ? pEn5 : pEs5}
           </P>
           <br />
           <br />
           <br />
          
-          <H4>WORK EXPERIENCE:</H4>
+          <H4>{language ? h4En3 : h4Es3}</H4>
           <br/>
           <P>
-            I was training at The Bit Cooperative Ltda for two years in Buenos
-            Aires, Argentina. I learned how to use MERN stack to build an
-            e-commerce web page. They offered me a position as a Junior, but
-            unfortunately I couldn't accept because I was about to relocate to
-            the UK
+              {language ? pEn6 : pEs6}
           </P>
           <br/>
           <br/>
-          <Bold>Letter of recommendation: </Bold><A href="https://drive.google.com/file/d/1-U_VUpv24BlGHmunJ5DkQY6Mis9OaMLF/view">Click here</A>
+          <Bold>{language ? boldEn5 : boldEs5}</Bold><A href="https://drive.google.com/file/d/1-U_VUpv24BlGHmunJ5DkQY6Mis9OaMLF/view"> {language ? pEn4 : pEs4}</A>
 
           <br />
           <br />
@@ -78,32 +72,30 @@ function ProfileBody() {
         </BoxProfile>
 
         <BoxProfile>
-          <H4>EDUCATION</H4>
+          <H4>{language ? h4En4 : h4Es4}</H4>
           <br />
           <Ul style={{'padding': '0 10%'}}>
             <Li>
-              Web Development for Beginners (Layout and Starter Javascript
-              course). May 2020 - August 2020, UTN
+              {language ? pEn8 : pEs8}
             </Li>
             <br />
             <Li>
-              Advanced Web Development (Stack MERN). August 2020 – December
-              2021, NucBA
+            {language ? pEn9 : pEs9}
             </Li>
             <br />
-            <Li>Udemy (NodeJs). May 2021 - June 2021</Li>
+            <Li>
+            {language ? pEn10 : pEs10}
+            </Li>
             <br />
             <Li>
-              IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs,
-              Postgresql, SQL, PHP, Python, C#, Java, Jquery. August 2021 -
-              April 2022.
+            {language ? pEn11 : pEs11}
             </Li>
           </Ul>
           <br />
           <br />
           <br />
 
-          <H4>LANGUAGES & FRAMEWORKS </H4>
+          <H4>{language ? h4En5 : h4Es5} </H4>
           <br />
           <Ul>
             <Li>HTML</Li>

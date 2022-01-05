@@ -32,8 +32,8 @@ export const h4En2 = "PROFILE";
 export const pEn5 = "After working as a professional musician for several years, I am now looking to start a new career as a Programmer and Web Developer. I am an enthusiastic person who is motivated and willing to learn new skills and work as part of a dedicated team. I have recently completed an introductory Programming course and am in the process of completing an Advanced Javascript course. I'm seeking a role where I can apply these newfound skills in a dynamic, practical way.";
 
 export const h4En3 = "WORK EXPERIENCE"
-export const pEn6 = "I was training at The Bit Cooperative Ltda for two years in Buenos Aires, Argentina. I learned how to use MERN stack to build an e-commerce web page. They offered me a position as a Junior, but unfortunately I couldn't accept because I was about to relocate to the UK";
-export const boldEn5 = "Letter of recommendation"
+export const pEn6 = "I was training at The Bit Cooperative Ltda for two years in Buenos Aires, Argentina. I learned how to use MERN stack to build an e-commerce web page. They offered me a position as a Junior, but unfortunately I couldn't accept because I was about to relocate to the UK.";
+export const boldEn5 = "Letter of recommendation: "
 export const pEn7 = "Click here"
 
 export const h4En4 = "EDUCATION"
@@ -43,3 +43,5 @@ export const pEn10 = "Udemy (NodeJs). May 2021 - June 2021"
 export const pEn11 = "IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs, Postgresql, SQL, PHP, Python, C#, Java, Jquery. August 2021 - April 2022."
 
 export const h4En5 = "LANGUAGES & FRAMEWORKS"
+
+export const downloadCvEn = "Download my curriculum"
