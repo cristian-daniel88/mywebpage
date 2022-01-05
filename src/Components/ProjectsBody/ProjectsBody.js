@@ -12,7 +12,10 @@ function ProjectsBody() {
     const array = dbEn;
 
 
-
+    const chooce = (id) => {
+        setIndex(id)
+        console.log(index)
+    }
     
     const rigthButtonSlide = () => {
         
@@ -89,7 +92,7 @@ function ProjectsBody() {
                         {
                             array.map((value, i) => (
                                 <LiLista key={value.id} color={index} i={i}>
-                                    <div style={{'display': 'flex'}}>
+                                    <div style={{'display': 'flex'}} onClick={()=> {chooce(i)}}>
 
                                    <ReactIcon color={index} i={i}/> <div>{value.nameProject}</div>
                                     </div>
