@@ -11,7 +11,6 @@ background-image: url('/assets/techdigi3.jpg');
 export const ProjectsFather = styled.div`
 width: 90%;
 margin: auto;
-
 height: 100vh;
 `
 
@@ -66,6 +65,7 @@ export const BodySlider = styled.div`
 width: 70%;
 height: 100%;
 border: solid 1px white;
+color: white;
 
 `
 
