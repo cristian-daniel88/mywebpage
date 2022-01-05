@@ -253,7 +253,32 @@ span:before
       border-color: transparent;
     }
   }
+
  
+ 
+}
+
+
+@media only screen and (max-width: 500px) and (min-width: 480px)  {
+  .parrafo {
+    width: 0; 
+
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    /* border-right: none; */
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
 
 
