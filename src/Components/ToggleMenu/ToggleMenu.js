@@ -42,10 +42,7 @@ function ToggleMenu() {
   const language = useSelector((state) => state.language.english);
   const history = useHistory();
 
-  const pushProfile = () => {
-    dispatch(burguerMenu());
-    history.push("/profile");
-  };
+ 
 
   const toggleMenu = () => {
     dispatch(burguerMenu());
@@ -59,6 +56,16 @@ function ToggleMenu() {
     dispatch(burguerMenu());
     history.push("/");
   };
+
+  const pushProfile = () => {
+    dispatch(burguerMenu());
+    history.push("/profile");
+  };
+
+  const pushProjects = ()=> {
+    dispatch(burguerMenu());
+    history.push("/projects");
+  }
 
   return (
     <Menu toggle={toggle}>
@@ -76,7 +83,7 @@ function ToggleMenu() {
               <ButtonMenu> {language ? enNavItem2 : esNavItem2}</ButtonMenu>
             </LiBurguer>
 
-            <LiBurguer>
+            <LiBurguer onClick={pushProjects}>
               <ButtonMenu> {language ? enNavItem3 : esNavItem3}</ButtonMenu>
             </LiBurguer>
 

@@ -57,6 +57,10 @@ function NavBar() {
     history.push('/')
   }
 
+  const pushProjects = () => {
+    history.push('/projects')
+  }
+
 
 
   return (
@@ -98,7 +102,7 @@ function NavBar() {
             </NavLiDivI>
           </NavLi>
 
-          <NavLi  onMouseEnter={name} onMouseLeave={name}>
+          <NavLi  onMouseEnter={name} onMouseLeave={name} onClick={pushProjects}>
             <NavLiDivI>
               <NavLiDivII >{language ? enNavItem3 : esNavItem3}</NavLiDivII>
             <NavLiDivIII hover={false}>

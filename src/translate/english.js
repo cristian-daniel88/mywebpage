@@ -21,6 +21,8 @@ export const copyrightEn = "Copyright 2022 Cristian Daniel Herrera, web develope
 export const h4En1 = "PERSONAL INFORMATION";
 export const boldEn1 = "Full-Name: ";
 export const pEn1 = "Cristian Daniel Herrera";
+export const boldEn6 = "Nationality: ";
+export const pEn12 = "Argentine"
 export const boldEn2 = "Email: ";
 export const pEn2 = "cristian.daniel.herrera@hotmail.com";
 export const boldEn3 = "Linkedin: "
@@ -45,3 +47,4 @@ export const pEn11 = "IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs, 
 export const h4En5 = "LANGUAGES & FRAMEWORKS"
 
 export const downloadCvEn = "Download my curriculum"
+

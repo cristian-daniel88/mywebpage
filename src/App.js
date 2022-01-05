@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer.js';
 import Top from './Components/Top/Top';
 import ToggleMenu from './Components/ToggleMenu/ToggleMenu';
 import Profile from './Pages/Profile';
+import Projects from './Pages/Projects';
 
 
 function App() {
@@ -31,7 +32,10 @@ function App() {
       <Route exact path='/profile'>
         <Profile/>
       </Route>
-
+      
+      <Route exact path='/projects'>
+        <Projects/>
+      </Route>
 
     </Switch>
 

@@ -32,10 +32,10 @@ function HomeBody() {
   const [tapping3, setTapping3] = useState(true);
   const history = useHistory()
 
-  const pushProfile = () => {
-      history.push('/profile')
+  const pushProjects = ()=> {
+    
+    history.push("/projects");
   }
-
 
   let mypromise = function functionOne(testInput) {
       setTimeout(() => {
@@ -99,7 +99,7 @@ function HomeBody() {
               </HiThereH3>
           </HiThereDiv>
 
-          <HireMeDiv >
+          <HireMeDiv onClick={pushProjects}>
             <HireMeButton>
               {language ? myProfileUk : myProfileES}
             </HireMeButton>
