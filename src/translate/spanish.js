@@ -42,6 +42,6 @@ export const pEs9 = "FullStack (Stack MERN). Agosto 2020 - Diciembre 2021, NucBA
 export const pEs10 = "Udemy (NodeJs). Mayo 2021 - Junio 2021"
 export const pEs11 = "IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs, Postgresql, SQL, PHP, Python, C#, Java, Jquery. Agosto 2021 - Abril 2022. It career en Reino Unido"; 
 
-export const h4Es5 = "LANGUAGES Y FRAMEWORKS"
+export const h4Es5 = "LANGUAJES Y FRAMEWORKS"
 
 export const downloadCvEs = "Bajate mi curriculum"
