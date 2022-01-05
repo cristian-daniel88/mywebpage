@@ -29,16 +29,18 @@ min-width: 280px;
 
 export const H4 = styled.h4`
 text-align: center;
+user-select: text;
 
 
 `
 
 export const Bold = styled.strong`
-
+user-select: text;
 `
 
 export const P = styled.p`
 display: inline-block;
+user-select: text;
 `
 
 export const A = styled.a`
@@ -65,4 +67,5 @@ padding: 0 20%;
 `
 
 export const Li = styled.li`
+user-select: text;
 `
