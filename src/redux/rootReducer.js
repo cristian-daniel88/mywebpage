@@ -1,10 +1,11 @@
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import burguerMenuReducer from "./burguerMenu/burguerMenuReducer";
 
 //reducers
 import languageReducer from "./language/languageReducer";
+import burguerMenuReducer from "./burguerMenu/burguerMenuReducer";
+import changeProjectReducer from "./changeProject/changeProjectReducer";
 
 
 const persistConfig = {
@@ -15,7 +16,8 @@ const persistConfig = {
   
   const rootReducer = combineReducers({
       language: languageReducer,
-      burger: burguerMenuReducer
+      burger: burguerMenuReducer,
+      project: changeProjectReducer
   
    
    

@@ -1,78 +1,171 @@
-import {  FaChevronCircleLeft, FaChevronCircleRight, FaChevronLeft } from "react-icons/fa";
+import {  FaChevronCircleLeft, FaChevronCircleRight} from "react-icons/fa";
 import styled from "styled-components";
 
 
-export const ProjectsContainer = styled.section`
-background-image: url('/assets/techdigi3.jpg');
 
 
-`
+export const ProjectsContainer = styled.div`
 
-export const ProjectsFather = styled.div`
-width: 90%;
-margin: auto;
-height: 100vh;
-`
+width: 100%;
 
-export const SlideContainer = styled.div`
-width: 50%;
-height: 70%;
-border: solid 1px white;
-margin: auto;
+height: auto;
+color: #fff;
+
+display: flex;
+justify-content: space-between;
+margin-bottom:200px ;
+
 @media screen and (max-width: 600px) {
-    width: 100%;
-  }
-
+  width: 100%;
+}
 `
 
-export const SlideFather = styled.div`
-width: 100%;
-height: 80%;
-border: solid 1px white;
+export const BotonContainer = styled.div`
+width: 20%;
+height: 40vh;
+background-color: black;
+//border: solid 1px white;
+position: relative;
+z-index: 2;
 display: flex;
-
-`
-export const ButtonContainerSlide = styled.div`
-width: 15%;
-height: 100%;
-border: solid 1px white;
-display: flex;
-align-items: center;
 justify-content: center;
+align-items: center;
+flex-direction: column;
+
+
+
 `
 
-export const ButtonSlider = styled.button`
+export const LeftButton = styled.button`
 background-color: transparent;
+margin: 30px;
 border: none;
-color: white;
-cursor: pointer;
-
+border-radius: 50%;
 
 
 `
+export const RightButton = styled.button`
+background-color: transparent;
+margin: 30px;
+border: none;
+border-radius: 50%;
+ `
 
-export const LeftButtonSlider = styled(FaChevronCircleLeft)`
-font-size: 2em;
+ export const Left = styled(FaChevronCircleLeft)`
+font-size: 3em;
+ color: white;
+ background-color: black;
+ border-radius: 50%;
+ transform: rotate(90deg);
+
+ `
+ export const Right= styled(FaChevronCircleRight)`
+ font-size: 3em;
+ color: white;
+background-color: black;
+ border-radius: 50%;
+ transform: rotate(90deg);
+
+ `;
+
+
+export const BodySlide = styled.div`
+width: 40%;
+padding: 10px;
+//border: solid 1px white;
+transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")};
+  transition: transform 0.5s ease-in-out;
+@media screen and (max-width: 600px) {
+  width: 80%;
+}
 
 `
 
-export const RightButtonSlider = styled(FaChevronCircleRight)`
-font-size: 2em;
-
-`
-
-export const BodySlider = styled.div`
-width: 70%;
-height: 100%;
+export const Lista = styled.div`
+width: 40%;
 border: solid 1px white;
-color: white;
+@media screen and (max-width: 600px) {
+  display: none;
+}
 
 `
 
-export const BalsContainer = styled.div`
-width: 100%;
-border: solid 1px white;
-height: 20%;
-background-color: green;
+export const UlLista = styled.ul`
+padding: 20px 20%;
 `
+
+export const LiLista = styled.li`
+color: ${(props) => (props.i == props.color ? "#ffffff" : "ffffff")};
+text-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea` : "#ffffff")};
+
+margin-bottom: 20px;
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export const BodySlideContainer = styled.div`
+// width: 50%;
+// @media screen and (max-width: 600px) {
+//     width: 100%;
+//     height: 50%;
+//   }
+
+
+// `
+
+// export const BallContainer = styled.div`
+// width: 100%;
+// color: white;
+// height: 50px;
+// text-align: center;
+// z-index: 50;
+
+
+// `
+
+
 
