@@ -69,3 +69,35 @@ padding: 0 20%;
 export const Li = styled.li`
 user-select: text;
 `
+
+export const DownloadButton = styled.div`
+display: flex;
+justify-content: center;
+
+`
+
+export const Download = styled.a`
+border: none;
+background-color: transparent;
+
+color: #fff;
+cursor: pointer;
+background: #500779;
+border-radius: 5px;
+padding: 8px 10px;
+font-size: 1em;
+border: solid 1px grey;
+
+&:hover , &:focus {
+    color: #ffffff;
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  
+  }
+
+`
+
+

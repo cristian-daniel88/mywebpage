@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { boldEn1, boldEn5, h4En1, h4En2, h4En3, h4En4, h4En5, pEn10, pEn11, pEn4, pEn5, pEn6, pEn8, pEn9 } from "../../translate/english";
-import { boldEs1, boldEs5, h4Es1, h4Es2, h4Es3, h4Es4, h4Es5, pEs10, pEs11, pEs4, pEs5, pEs6, pEs8, pEs9 } from "../../translate/spanish";
+import { boldEn1, boldEn5, downloadCvEn, h4En1, h4En2, h4En3, h4En4, h4En5, pEn10, pEn11, pEn4, pEn5, pEn6, pEn8, pEn9 } from "../../translate/english";
+import { boldEs1, boldEs5, downloadCvEs, h4Es1, h4Es2, h4Es3, h4Es4, h4Es5, pEs10, pEs11, pEs4, pEs5, pEs6, pEs8, pEs9 } from "../../translate/spanish";
 import {
   A,
   Bold,
   BoxProfile,
+  Download,
+  DownloadButton,
   H4,
   Li,
   P,
@@ -108,7 +110,14 @@ function ProfileBody() {
             <Li>SQL</Li>
             <Li>Bootstrap</Li>
           </Ul>
-        
+          <br/>
+          <br/>
+          <br/>
+          <DownloadButton>
+            <Download href="/assets/r.pdf" download>
+                {language ? downloadCvEn : downloadCvEs}
+            </Download>
+          </DownloadButton>
         </BoxProfile>
       </ProfileFather>
       <br />
