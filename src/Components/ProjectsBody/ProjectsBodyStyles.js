@@ -1,8 +1,9 @@
+import {  FaChevronCircleLeft, FaChevronCircleRight, FaChevronLeft } from "react-icons/fa";
 import styled from "styled-components";
 
 
 export const ProjectsContainer = styled.section`
-color: white;
+background-image: url('/assets/techdigi3.jpg');
 
 
 `
@@ -10,7 +11,7 @@ color: white;
 export const ProjectsFather = styled.div`
 width: 90%;
 margin: auto;
-border: solid 1px white;
+
 height: 100vh;
 `
 
@@ -19,6 +20,9 @@ width: 50%;
 height: 70%;
 border: solid 1px white;
 margin: auto;
+@media screen and (max-width: 600px) {
+    width: 100%;
+  }
 
 `
 
@@ -33,6 +37,29 @@ export const ButtonContainerSlide = styled.div`
 width: 15%;
 height: 100%;
 border: solid 1px white;
+display: flex;
+align-items: center;
+justify-content: center;
+`
+
+export const ButtonSlider = styled.button`
+background-color: transparent;
+border: none;
+color: white;
+cursor: pointer;
+
+
+
+`
+
+export const LeftButtonSlider = styled(FaChevronCircleLeft)`
+font-size: 2em;
+
+`
+
+export const RightButtonSlider = styled(FaChevronCircleRight)`
+font-size: 2em;
+
 `
 
 export const BodySlider = styled.div`
@@ -48,3 +75,4 @@ border: solid 1px white;
 height: 20%;
 background-color: green;
 `
+

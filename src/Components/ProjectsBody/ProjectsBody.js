@@ -1,5 +1,5 @@
 import React from 'react'
-import { BalsContainer, BodySlider, ButtonContainerSlide, ProjectsContainer, ProjectsFather, SlideContainer, SlideFather } from './ProjectsBodyStyles'
+import { BalsContainer, BodySlider, ButtonContainerSlide, ButtonSlider, LeftButtonSlider, ProjectsContainer, ProjectsFather, RightButtonSlider, SlideContainer, SlideFather } from './ProjectsBodyStyles'
 
 function ProjectsBody() {
     
@@ -9,13 +9,28 @@ function ProjectsBody() {
                 <SlideContainer>
                     <SlideFather>
                         <ButtonContainerSlide>
-
+                                <ButtonSlider>
+                                  <LeftButtonSlider/>
+                                </ButtonSlider>
                         </ButtonContainerSlide>
+
+
                         <BodySlider>
 
-                        </BodySlider>
-                        <ButtonContainerSlide>
 
+
+
+
+
+
+                        </BodySlider>
+
+
+
+                        <ButtonContainerSlide>
+                                    <ButtonSlider>
+                                        <RightButtonSlider/>
+                                    </ButtonSlider>
                         </ButtonContainerSlide>
                     </SlideFather>
 
