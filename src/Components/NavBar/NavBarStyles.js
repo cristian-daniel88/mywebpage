@@ -119,7 +119,7 @@ export const NavUl = styled.ul`
 `;
 export const NavLi = styled.li`
   list-style: none;
-  margin: 0 1%;
+  margin: 0 2%;
   cursor: pointer;
   border: none; 
   &:focus {
