@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+
 import { useDispatch, useSelector } from 'react-redux';
 import { dbEn } from '../../db/db'
 import { changeProject } from '../../redux/changeProject/changeProjectActions';
-import {BodySlide, BotonContainer, Left, LeftButton, LiLista, Lista, ProjectsContainer, Right, RightButton, UlLista} from './ProjectsBodyStyles'
+import {BodySlide, BotonContainer, Left, LeftButton, LiLista, LiLista2, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, UlLista} from './ProjectsBodyStyles'
 
 function ProjectsBody() {
     const [index, setIndex] = useState(0);
@@ -70,10 +71,10 @@ function ProjectsBody() {
         <>
        <ProjectsContainer>
            <BotonContainer>
-                <LeftButton onClick={timerRight}>
+                <LeftButton onClick={timerLeft}>
                         <Left/>
                 </LeftButton>
-                <RightButton onClick={timerLeft}>
+                <RightButton onClick={timerRight}>
                         <Right/>
                 </RightButton>
 
@@ -88,12 +89,28 @@ function ProjectsBody() {
                         {
                             array.map((value, i) => (
                                 <LiLista key={value.id} color={index} i={i}>
-                                    {value.nameProject}
+                                    <div style={{'display': 'flex'}}>
+
+                                   <ReactIcon color={index} i={i}/> <div>{value.nameProject}</div>
+                                    </div>
                                 </LiLista>
                             ))
                         }
                 </UlLista>
            </Lista>
+
+           <Lista2>
+                    <ul style={{'marginTop': '20px'}}>
+                    {
+                            array.map((value, i) => (
+                                <LiLista2 key={value.id} color={index} i={i}>
+                                    <ReactIcon color={index} i={i}/>
+                                    
+                                </LiLista2>
+                            ))
+                        }
+                    </ul>
+           </Lista2>
          
        </ProjectsContainer>
      

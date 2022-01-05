@@ -1,4 +1,4 @@
-import {  FaChevronCircleLeft, FaChevronCircleRight} from "react-icons/fa";
+import {  FaChevronCircleLeft, FaChevronCircleRight, FaReact} from "react-icons/fa";
 import styled from "styled-components";
 
 
@@ -83,7 +83,7 @@ transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")}
 
 export const Lista = styled.div`
 width: 40%;
-border: solid 1px white;
+//border: solid 1px white;
 @media screen and (max-width: 600px) {
   display: none;
 }
@@ -92,6 +92,7 @@ border: solid 1px white;
 
 export const UlLista = styled.ul`
 padding: 20px 20%;
+
 `
 
 export const LiLista = styled.li`
@@ -101,7 +102,38 @@ text-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0
       0 0 12px #0e54ea` : "#ffffff")};
 
 margin-bottom: 20px;
+list-style: none;
 `
+
+export const Lista2 = styled.div`
+display: none;
+//border: solid 1px white;
+@media screen and (max-width: 600px) {
+  display: block;
+};
+ `
+export const LiLista2 = styled.li`
+color: ${(props) => (props.i == props.color ? "#ffffff" : "ffffff")};
+text-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea` : "#ffffff")};
+list-style: none;
+
+
+`;
+
+export const ReactIcon = styled(FaReact)`
+color: #ffffff;
+box-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea` : "#ffffff")};
+margin-bottom: 30px;
+margin-right: 10px;
+border-radius: 50%;
+`
+
+
+
 
 
 

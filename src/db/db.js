@@ -14,7 +14,7 @@ export  const dbEn = [
   
     {
       id : 2,
-      nameProject: "PedimonYaII",
+      nameProject: "PedimonYa I",
       description: "pedimon ipsum dolor sit amet consectetur adipisicing elit. Autem, impedit, voluptate illum recusandae aut iste quisquam sed consectetur enim animi sint nisi voluptates eius porro. Sapiente unde aliquam inventore ut temporibus, similique enim quae error qui atque maxime voluptate magnam? Facilis ab placeat optio, id sed, tenetur repellendus sequi vero voluptatibus maiores beatae dolorem ea laboriosam fuga mollitia! Reiciendis, omnis!",
       tecnologies: "React, Firebase, Redux",
       gitHub: "https://github.com/cristian-daniel88/PokeRedux",
@@ -40,7 +40,7 @@ export  const dbEn = [
   
     {
       id : 4,
-      nameProject: "PedimonYaII",
+      nameProject: "PedimonYa II",
       description: "pedimonII ipsum dolor sit amet consectetur adipisicing elit. Autem, impedit, voluptate illum recusandae aut iste quisquam sed consectetur enim animi sint nisi voluptates eius porro. Sapiente unde aliquam inventore ut temporibus, similique enim quae error qui atque maxime voluptate magnam? Facilis ab placeat optio, id sed, tenetur repellendus sequi vero voluptatibus maiores beatae dolorem ea laboriosam fuga mollitia! Reiciendis, omnis!",
       tecnologies: "HTML, CSS, JavaScript, Bootstrap",
       gitHub: "https://github.com/cristian-daniel88/pedimonYa",
