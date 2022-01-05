@@ -32,6 +32,10 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 
+@media screen and (max-width: 600px) {
+  height: 60vh;
+}
+
 
 
 `
@@ -41,14 +45,35 @@ background-color: transparent;
 margin: 30px;
 border: none;
 border-radius: 50%;
+cursor: pointer;
+
+&:hover{
+    color: #ffffff;
+    box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea ;
+     border: none;
+  }
+
 
 
 `
 export const RightButton = styled.button`
 background-color: transparent;
 margin: 30px;
-border: none;
+
 border-radius: 50%;
+cursor: pointer;
+z-index: 5;
+border: none;
+
+&:hover{
+    color: #ffffff;
+    box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea ;
+     border: none;
+  }
  `
 
  export const Left = styled(FaChevronCircleLeft)`
@@ -57,6 +82,8 @@ font-size: 3em;
  background-color: black;
  border-radius: 50%;
  transform: rotate(90deg);
+
+
 
  `
  export const Right= styled(FaChevronCircleRight)`
@@ -96,13 +123,14 @@ padding: 20px 20%;
 `
 
 export const LiLista = styled.li`
-color: ${(props) => (props.i == props.color ? "#ffffff" : "ffffff")};
+color: #ffffff;
 text-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
       0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
       0 0 12px #0e54ea` : "#ffffff")};
 
 margin-bottom: 20px;
 list-style: none;
+cursor: pointer;
 `
 
 export const Lista2 = styled.div`
