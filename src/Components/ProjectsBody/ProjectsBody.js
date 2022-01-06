@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { dbEn } from '../../db/db'
 import { changeProject } from '../../redux/changeProject/changeProjectActions';
-import {BodySlide, BotonContainer, Left, LeftButton, LiLista, LiLista2, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, UlLista} from './ProjectsBodyStyles'
+import {BodySlide, BotonContainer, DivList, Left, LeftButton, LiLista, LiLista2, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, UlLista} from './ProjectsBodyStyles'
 
 function ProjectsBody() {
     const [index, setIndex] = useState(0);
@@ -92,10 +92,10 @@ function ProjectsBody() {
                         {
                             array.map((value, i) => (
                                 <LiLista key={value.id} color={index} i={i}>
-                                    <div style={{'display': 'flex'}} onClick={()=> {chooce(i)}}>
+                                    <DivList style={{'display': 'flex'}} onClick={()=> {chooce(i)}}color={index} i={i}>
 
                                    <ReactIcon color={index} i={i}/> <div>{value.nameProject}</div>
-                                    </div>
+                                    </DivList>
                                 </LiLista>
                             ))
                         }
@@ -103,7 +103,7 @@ function ProjectsBody() {
            </Lista>
 
            <Lista2>
-                    <ul style={{'marginTop': '20px'}}>
+                    <ul style={{'marginTop': '20px', 'display':'flex', 'paddingLeft':'150px'}}>
                     {
                             array.map((value, i) => (
                                 <LiLista2 key={value.id} color={index} i={i}>

@@ -14,6 +14,7 @@ color: #fff;
 display: flex;
 justify-content: space-between;
 margin-bottom:200px ;
+flex-wrap: wrap;
 
 @media screen and (max-width: 600px) {
   width: 100%;
@@ -32,8 +33,9 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 
+
 @media screen and (max-width: 600px) {
-  height: 60vh;
+  height: 40vh;
 }
 
 
@@ -137,7 +139,8 @@ export const Lista2 = styled.div`
 display: none;
 //border: solid 1px white;
 @media screen and (max-width: 600px) {
-  display: block;
+  display: inline;
+
 };
  `
 export const LiLista2 = styled.li`
@@ -158,6 +161,11 @@ box-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0e
 margin-bottom: 30px;
 margin-right: 10px;
 border-radius: 50%;
+`
+
+export const DivList = styled.div`
+color: #ffffff;
+
 `
 
 
