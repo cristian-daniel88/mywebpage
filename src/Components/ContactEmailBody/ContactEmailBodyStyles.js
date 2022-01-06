@@ -1,22 +1,23 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled.section`
-height: 100vh;
+height: auto;
 width: 100%;
-background-image: url('./assets/techdigi3.jpg'); 
+background-image: url('./assets/techdigi3.jpg');
+padding: 50px;
 
 @media screen and (max-width: 600px) {
-
-    margin-bottom: 50px;
-    height: 110vh;
-  }
+  
+  
+  
+}
 
 `
 
 export const FormContact = styled.form`
 width: 25%;
 margin: auto;
-height: 90%;
+
 color: #ffffff;
 
 display: flex;
@@ -25,6 +26,7 @@ justify-content: space-between;
 padding: 5px;
 border-radius: 5px;
 border: solid 1px #ffffff;
+
 
 @media screen and (max-width: 600px) {
     width: 90%;
