@@ -121,8 +121,8 @@ function ToggleMenu() {
           </UlBurguer>
 
           <ButtonBurguerContainer>
-            <ButtonMenu>
-              <ButtonBurguer onClick={toggleMenu} />
+            <ButtonMenu onClick={toggleMenu} >
+              <ButtonBurguer />
             </ButtonMenu>
           </ButtonBurguerContainer>
         </NavBurguer>
