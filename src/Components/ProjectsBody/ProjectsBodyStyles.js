@@ -23,7 +23,7 @@ flex-wrap: wrap;
 
 export const BotonContainer = styled.div`
 width: 20%;
-height: 40vh;
+height: 50vh;
 background-color: black;
 //border: solid 1px white;
 position: relative;
@@ -35,7 +35,7 @@ flex-direction: column;
 
 
 @media screen and (max-width: 600px) {
-  height: 40vh;
+  height: 70vh;
 }
 
 
@@ -149,6 +149,7 @@ text-shadow: ${(props) => (props.i == props.color ? `0 0 8px #0e54ea, 0 0 2px #0
       0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
       0 0 12px #0e54ea` : "#ffffff")};
 list-style: none;
+cursor: pointer;
 
 
 `;
@@ -165,6 +166,16 @@ border-radius: 50%;
 
 export const DivList = styled.div`
 color: #ffffff;
+
+`
+
+
+
+//**Fonts **//
+
+export const Strong = styled.strong`
+
+
 
 `
 

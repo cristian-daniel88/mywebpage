@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { dbEn } from '../../db/db'
 import { changeProject } from '../../redux/changeProject/changeProjectActions';
-import {BodySlide, BotonContainer, DivList, Left, LeftButton, LiLista, LiLista2, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, UlLista} from './ProjectsBodyStyles'
+import { BodySlide,BotonContainer, DivList, Left, LeftButton, LiLista, LiLista2, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, Strong, UlLista} from './ProjectsBodyStyles'
 
 function ProjectsBody() {
     const [index, setIndex] = useState(0);
@@ -83,8 +83,34 @@ function ProjectsBody() {
 
            </BotonContainer>
            <BodySlide toggle={change}>
-
-           {array[index].description}
+            <Strong>Project: </Strong>{array[index].nameProject}
+            <br/>
+            <br/>
+            <Strong>Description: </Strong>
+             {array[index].description}
+            <br/>
+            <br/>
+            <Strong>Tecnologies: </Strong>
+            {array[index].tecnologies}
+            <br/>
+            <br/>
+            <Strong>Link frontend: </Strong>{array[index].linkFront1}
+            <br/>
+            <br/>
+            {array[index].linkFront2 && (<><Strong>Link frontend II: </Strong>{array[index].linkFront2} 
+            <br/>
+            <br/>
+            </>)}
+            {array[index].linkApi1 && (<><Strong>Link backend: </Strong>{array[index].linkApi1} 
+            <br/>
+            <br/>
+            </>)}
+            {array[index].linkApi2 && (<><Strong>Link backend II: </Strong>{array[index].linkApi2} 
+            <br/>
+            <br/>
+            </>)}
+            <Strong>Github: </Strong>{array[index].gitHub}
+            
            </BodySlide>
 
            <Lista>
@@ -106,7 +132,7 @@ function ProjectsBody() {
                     <ul style={{'marginTop': '20px', 'display':'flex', 'paddingLeft':'150px'}}>
                     {
                             array.map((value, i) => (
-                                <LiLista2 key={value.id} color={index} i={i}>
+                                <LiLista2 key={value.id} color={index} i={i}  onClick={()=> {chooce(i)}}>
                                     <ReactIcon color={index} i={i}/>
                                     
                                 </LiLista2>
