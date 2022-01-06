@@ -94,7 +94,7 @@ function ProjectsBody() {
             {array[index].tecnologies}
             <br/>
             <br/>
-            {array[index].linkFront1 && (<><Strong>Link frontend I: </Strong><LinkA href={array[index].linkFront1} target='_blank'>Click Here</LinkA>
+            {array[index].linkFront1 && (<><Strong>Link frontend: </Strong><LinkA href={array[index].linkFront1} target='_blank'>Click Here</LinkA>
             <br/>
             <br/>
             </>)}
