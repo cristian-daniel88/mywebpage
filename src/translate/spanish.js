@@ -47,3 +47,9 @@ export const pEs11 = "IT Career (HTML, CSS, JavaScript, Testing, React, Nodejs, 
 export const h4Es5 = "LANGUAJES Y FRAMEWORKS"
 
 export const downloadCvEs = "Bajate mi curriculum"
+
+// Projects
+export const projectEs = "Proyecto"
+export const descriptionEs = "Descripción"
+export const tecnoligiesEs = "Tecnologías"
+export const videoEs = "Video demostración"

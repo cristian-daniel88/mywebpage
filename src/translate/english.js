@@ -48,3 +48,10 @@ export const h4En5 = "LANGUAGES & FRAMEWORKS"
 
 export const downloadCvEn = "Download my curriculum"
 
+// Projects
+export const projectEn = "Project"
+export const descriptionEn = "Description"
+export const tecnoligiesEn = "Tecnologies"
+
+
+
