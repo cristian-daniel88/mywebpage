@@ -14,7 +14,7 @@ function ProjectsBody() {
 
     const chooce = (id) => {
         setIndex(id)
-        console.log(index)
+       
     }
     
     const rigthButtonSlide = () => {
