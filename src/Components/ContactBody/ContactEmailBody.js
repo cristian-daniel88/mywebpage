@@ -1,11 +1,11 @@
 import React from 'react'
-import { ContactContainer, EmailButton, EmailInput, EmailLabel, EmailSpan, EmailTextArea, FormContact, InputContainer } from './ContactBodyStyles'
+import { ContactContainer, EmailButton, EmailInput, EmailLabel, EmailSpan, EmailTextArea, FormContact, InputContainer } from './ContactEmailBodyStyles'
 
 const submitEmail = (e) => {
   e.preventDefault()
 }
 
-function ContactBody() {
+function ContactEmailBody() {
     return (
         <ContactContainer>
             <FormContact onSubmit={(e)=> {submitEmail(e)}}>
@@ -38,7 +38,7 @@ function ContactBody() {
 
                 <InputContainer>
                 <EmailButton>
-                    Submit
+                    Send
                 </EmailButton>
                 </InputContainer>
             </FormContact>
@@ -46,4 +46,4 @@ function ContactBody() {
     )
 }
 
-export default ContactBody
+export default ContactEmailBody

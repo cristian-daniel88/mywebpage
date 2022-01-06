@@ -1,10 +1,11 @@
 import React from 'react'
-import ContactBody from '../Components/ContactBody/ContactBody'
+
+import ContactEmailBody from '../Components/ContactBody/ContactEmailBody'
 
 function Contact() {
     return (
-        <ContactBody/>
-    )
+    <ContactEmailBody/>
+    ) 
 }
 
 export default Contact

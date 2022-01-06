@@ -4,6 +4,7 @@ export const ContactContainer = styled.section`
 height: 100vh;
 width: 100%;
 background-image: url('./assets/techdigi3.jpg'); 
+
 `
 
 export const FormContact = styled.form`
@@ -11,11 +12,13 @@ width: 25%;
 margin: auto;
 height: 80%;
 color: #ffffff;
-background-color: black;
+
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 padding: 5px;
+border-radius: 5px;
+border: solid 1px #ffffff;
 
 @media screen and (max-width: 600px) {
     width: 90%;
