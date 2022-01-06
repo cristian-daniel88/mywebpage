@@ -1,10 +1,14 @@
 import React from 'react'
 
-import ContactEmailBody from '../Components/ContactBody/ContactEmailBody'
+
+import ContactEmailBody from '../Components/ContactEmailBody/ContactEmailBody'
 
 function Contact() {
     return (
+    <>
     <ContactEmailBody/>
+    
+    </>    
     ) 
 }
 

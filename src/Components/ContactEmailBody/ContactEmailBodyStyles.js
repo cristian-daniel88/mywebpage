@@ -10,7 +10,7 @@ background-image: url('./assets/techdigi3.jpg');
 export const FormContact = styled.form`
 width: 25%;
 margin: auto;
-height: 80%;
+height: 90%;
 color: #ffffff;
 
 display: flex;
@@ -32,15 +32,30 @@ flex-direction: column;
 `
 
 export const EmailLabel = styled.label`
-margin-bottom: 15px;
+
 width: 99%;
 margin: auto;
+margin-bottom: 10px;
 `
 
 
 export const EmailInput = styled.input`
 width: 99%;
 margin: auto;
+border: none;
+outline: none;
+height: 23px;
+border-radius: 5px;
+margin-bottom: 20px;
+&:focus  {
+  
+    
+      box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+      0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+      0 0 12px #0e54ea;
+      border: none;
+  
+  }
 `
 
 export const EmailButton = styled.button`
@@ -56,6 +71,7 @@ border: solid 1px grey;
 width: 50%;
 margin: auto;
 margin-top: 30px;
+margin-bottom: 5px;
 &:hover  {
     color: #ffffff;
     
@@ -74,7 +90,20 @@ width: 99%;
 margin: auto;
 height: 300px;
 resize: none;
+border: none;
+outline: none;
 
+border-radius: 5px;
+
+&:focus  {
+  
+    
+  box-shadow: 0 0 8px #0e54ea, 0 0 2px #0e54ea, 0 0 10px #0e54ea,
+  0 0 6px #0e54ea, 0 0 20px #0e54ea, 0 0 20px #0e54ea, 0 0 1px #0e54ea,
+  0 0 12px #0e54ea;
+  border: none;
+
+}
 
 `
 

@@ -11,16 +11,16 @@ function ContactEmailBody() {
             <FormContact onSubmit={(e)=> {submitEmail(e)}}>
                 <InputContainer>
                 
-                <EmailLabel>Email:</EmailLabel>
-                <EmailSpan>Email no coicide</EmailSpan>
+                <EmailLabel>Email: <EmailSpan>Email no coicide</EmailSpan></EmailLabel>
+                            
                 <EmailInput/>
 
                 </InputContainer>
 
                 <InputContainer>
                 
-                <EmailLabel>Repeat email:</EmailLabel>
-                <EmailSpan>Email no coicide</EmailSpan>
+                <EmailLabel>Repeat email: <EmailSpan>Email no coicide</EmailSpan></EmailLabel>
+    
                 <EmailInput/>
 
                 </InputContainer>
