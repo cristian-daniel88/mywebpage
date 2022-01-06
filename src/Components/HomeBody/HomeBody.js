@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import {
   Body,
   BodyContainer,
@@ -37,31 +37,23 @@ function HomeBody() {
     history.push("/projects");
   }
 
-  let mypromise = function functionOne(testInput) {
-      setTimeout(() => {
-     
-          setLoading(false);
-      
-      }, 2000);
  
-      setTimeout(() => {
-       
-          setTapipping(false); setTapping2(true);
-     
-      }, 10000);
-
-
-      setTimeout(() => {
-     
-      setTapping2(false); setTapping3(false)
-       
-      }, 18000);
    
-  };
 
-  useEffect(() => {
-    mypromise();
-  }, []);
+useEffect(() => {
+  let timer1 = setTimeout(() => {setLoading(false);}, 2000);
+
+  let timer2 = setTimeout(() => {setTapipping(false); setTapping2(true)}, 10000);
+
+  let timer3 = setTimeout(() => {setTapping2(false);  setTapping3(false)}, 18000);
+  return () => {
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+    clearTimeout(timer3);
+  }
+}, [])
+  
+  
   return (
     <>
     <Body>
