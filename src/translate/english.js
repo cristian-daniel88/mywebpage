@@ -52,6 +52,7 @@ export const downloadCvEn = "Download my curriculum"
 export const projectEn = "Project"
 export const descriptionEn = "Description"
 export const tecnoligiesEn = "Tecnologies"
+export const videoEn = "Video demostration"
 
 
 

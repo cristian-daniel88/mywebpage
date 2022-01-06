@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { dbEn, dbEs } from '../../db/db'
 import { changeProject } from '../../redux/changeProject/changeProjectActions';
+import { descriptionEn, pEn4, projectEn, tecnoligiesEn } from '../../translate/english';
+import { descriptionEs, pEs4, projectEs, tecnoligiesEs } from '../../translate/spanish';
 import { BodySlide,BotonContainer, DivList, Left, LeftButton, LiLista, LiLista2, LinkA, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, Strong, UlLista} from './ProjectsBodyStyles'
 
 function ProjectsBody() {
@@ -93,38 +95,38 @@ function ProjectsBody() {
 
            </BotonContainer>
            <BodySlide toggle={change}>
-            <Strong>Project: </Strong>{array[index].nameProject && array[index].nameProject}
+            <Strong>{language ? projectEn : projectEs}: </Strong>{array[index].nameProject && array[index].nameProject}
             <br/>
             <br/>
-            <Strong>Description: </Strong>
+            <Strong>{language ? descriptionEn : descriptionEs}: </Strong>
              {array[index].description && array[index].description}
             <br/>
             <br/>
-            <Strong>Tecnologies: </Strong>
+            <Strong>{language ? tecnoligiesEn : tecnoligiesEs}: </Strong>
             {array[index].tecnologies}
             <br/>
             <br/>
-            {array[index].linkFront1 && (<><Strong>Link frontend: </Strong><LinkA href={array[index].linkFront1} target='_blank'>Click Here</LinkA>
+            {array[index].linkFront1 && (<><Strong>Link frontend: </Strong><LinkA href={array[index].linkFront1} target='_blank'>{language ? pEn4 : pEs4}</LinkA>
             <br/>
             <br/>
             </>)}
-            {array[index].linkFront2 && (<><Strong>Link frontend II: </Strong><LinkA href={array[index].linkFront2} target='_blank'>Click Here</LinkA>
+            {array[index].linkFront2 && (<><Strong>Link frontend II: </Strong><LinkA href={array[index].linkFront2} target='_blank'>{language ? pEn4 : pEs4}</LinkA>
             <br/>
             <br/>
             </>)}
-            {array[index].linkApi1 && (<><Strong>Link backend: </Strong><LinkA href={array[index].linkApi1} target='_blank'>Click Here</LinkA>
+            {array[index].linkApi1 && (<><Strong>Link backend: </Strong><LinkA href={array[index].linkApi1} target='_blank'>{language ? pEn4 : pEs4}</LinkA>
             <br/>
             <br/>
             </>)}
-            {array[index].linkApi2 && (<><Strong>Link backend II: </Strong><LinkA href={array[index].linkAp12} target='_blank'>Click Here</LinkA>
+            {array[index].linkApi2 && (<><Strong>Link backend II: </Strong><LinkA href={array[index].linkAp12} target='_blank'>{language ? pEn4 : pEs4}</LinkA>
             <br/>
             <br/>
             </>)}
-            {array[index].videoLink && (<><Strong>Video Demostration: </Strong><LinkA href={array[index].videoLink} target='_blank'>Click Here</LinkA>
+            {array[index].videoLink && (<><Strong>Video Demostration: </Strong><LinkA href={array[index].videoLink} target='_blank'>{language ? pEn4 : pEs4}</LinkA>
             <br/>
             <br/>
             </>)}
-            <Strong>Github: </Strong><LinkA href={array[index].gitHub && array[index].nameProject}>Click here</LinkA>
+            <Strong>Github: </Strong><LinkA href={array[index].gitHub && array[index].nameProject}>{language ? pEn4 : pEs4}</LinkA>
             
             
            </BodySlide>
