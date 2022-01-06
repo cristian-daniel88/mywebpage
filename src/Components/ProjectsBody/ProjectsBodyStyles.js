@@ -35,7 +35,7 @@ flex-direction: column;
 
 
 @media screen and (max-width: 600px) {
-  height: 80vh;
+  height: 100vh;
 }
 
 
