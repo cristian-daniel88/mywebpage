@@ -8,7 +8,7 @@ export  const dbEn = [
       linkFront1: "https://amazing-ecomerce.herokuapp.com",
       linkFront2: "",
       linkApi1: "https://ecomerceamazona.herokuapp.com",
-      linkAp12: "",
+      linkApi2: "",
       videoLink:""
     },
   
@@ -21,7 +21,7 @@ export  const dbEn = [
       linkFront1: "https://poke-redux.vercel.app",
       linkFront2: "",
       linkApi1: "",
-      linkAp12: "",
+      linkApi2: "",
       videoLink: "",
     },
   
@@ -34,7 +34,7 @@ export  const dbEn = [
       linkFront1: "https://home-banking-cristian-dh-errera.vercel.app",
       linkFront2: "",
       linkApi1: "",
-      linkAp12: "",
+      linkApi2: "",
       videoLink:""
     },
   
@@ -47,7 +47,7 @@ export  const dbEn = [
       linkFront1:"https://pedimon-ya.vercel.app",
       linkFront2: "",
       linkApi1: "",
-      linkAp12: "",
+      linkApi2: "",
       videoLink:""
     }
   

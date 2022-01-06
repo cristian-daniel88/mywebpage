@@ -106,11 +106,16 @@ function ProjectsBody() {
             <br/>
             <br/>
             </>)}
-            {array[index].linkAp12 && (<><Strong>Link backend II: </Strong><LinkA href={array[index].linkAp12} target='_blank'>Click Here</LinkA>
+            {array[index].linkApi2 && (<><Strong>Link backend II: </Strong><LinkA href={array[index].linkAp12} target='_blank'>Click Here</LinkA>
+            <br/>
+            <br/>
+            </>)}
+            {array[index].videoLink && (<><Strong>Video Demostration: </Strong><LinkA href={array[index].videoLink} target='_blank'>Click Here</LinkA>
             <br/>
             <br/>
             </>)}
             <Strong>Github: </Strong><LinkA href={array[index].gitHub}>Click here</LinkA>
+            
             
            </BodySlide>
 
