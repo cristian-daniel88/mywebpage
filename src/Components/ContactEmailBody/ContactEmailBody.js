@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import {
   ContactContainer,
   EmailButton,
@@ -11,11 +11,12 @@ import {
   RecaptchaEmail,
 } from "./ContactEmailBodyStyles";
 import ReCAPTCHA from "react-google-recaptcha";
+//https://developers.google.com/recaptcha/intro
 
 
 function ContactEmailBody() {
-    const captcha = useRef(null )
- 
+    const captcha = useRef(null);
+   
     const submitEmail = (e) => {
         e.preventDefault();
       };
@@ -25,6 +26,9 @@ function ContactEmailBody() {
             console.log('no robot')
         }
     }
+
+
+    
       
 
   return (
@@ -35,19 +39,27 @@ function ContactEmailBody() {
         }}
       >
         <InputContainer>
-          <EmailLabel>
+          <EmailLabel htmlFor="emailI">
             Email: <EmailSpan>Email no coicide</EmailSpan>
           </EmailLabel>
-
-          <EmailInput />
+          <EmailInput 
+          type='email'
+          id="emailI"
+          name="emailI"
+          placeholder="Your email"
+          />
         </InputContainer>
 
         <InputContainer>
-          <EmailLabel>
+          <EmailLabel htmlFor="emailII">
             Repeat email: <EmailSpan>Email no coicide</EmailSpan>
           </EmailLabel>
-
-          <EmailInput />
+          <EmailInput 
+          type='email'
+          id="emailII"
+          name="emailII"
+          placeholder="Repeat your email please"
+          />
         </InputContainer>
 
         <InputContainer>

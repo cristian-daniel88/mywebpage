@@ -26,6 +26,7 @@ justify-content: space-between;
 padding: 5px;
 border-radius: 5px;
 border: solid 1px #ffffff;
+background-color: black;
 
 
 @media screen and (max-width: 600px) {
@@ -133,4 +134,3 @@ margin-top: 20px;
 
 `
 
-//https://developers.google.com/recaptcha/intro
