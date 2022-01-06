@@ -61,6 +61,10 @@ function NavBar() {
     history.push('/projects')
   }
 
+  const pushContact = () => {
+    history.push('/contact')
+  }
+
 
 
   return (
@@ -110,7 +114,7 @@ function NavBar() {
             </NavLiDivI>
           </NavLi>
 
-          <NavLi>
+          <NavLi onClick={pushContact}>
             <NavLiDivI>
               <NavLiDivII>{language ? enNavItem4 : esNavItem4}</NavLiDivII>
                <NavLiDivIII>

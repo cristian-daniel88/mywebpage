@@ -67,6 +67,11 @@ function ToggleMenu() {
     history.push("/projects");
   }
 
+  const pushContact = () => {
+    dispatch(burguerMenu());
+    history.push('/contact')
+  }
+
   return (
     <Menu toggle={toggle}>
       <MenuContainer>
@@ -87,7 +92,7 @@ function ToggleMenu() {
               <ButtonMenu> {language ? enNavItem3 : esNavItem3}</ButtonMenu>
             </LiBurguer>
 
-            <LiBurguer>
+            <LiBurguer onClick={pushContact}>
               <ButtonMenu> {language ? enNavItem4 : esNavItem4}</ButtonMenu>
             </LiBurguer>
 

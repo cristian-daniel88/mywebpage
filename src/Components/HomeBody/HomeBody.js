@@ -61,7 +61,7 @@ useEffect(() => {
         <div>
           <div className="ring">
             Loading
-            <span></span>
+            <span id='span'></span>
           </div>
         </div>
       </Loading>

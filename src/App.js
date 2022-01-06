@@ -8,6 +8,7 @@ import Top from './Components/Top/Top';
 import ToggleMenu from './Components/ToggleMenu/ToggleMenu';
 import Profile from './Pages/Profile';
 import Projects from './Pages/Projects';
+import Contact from './Pages/Contact';
 
 
 function App() {
@@ -35,6 +36,10 @@ function App() {
       
       <Route exact path='/projects'>
         <Projects/>
+      </Route>
+
+      <Route exact path='/contact'>
+        <Contact/>
       </Route>
 
     </Switch>

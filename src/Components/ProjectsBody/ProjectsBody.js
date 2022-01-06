@@ -1,16 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux';
-import { dbEn } from '../../db/db'
+import { dbEn, dbEs } from '../../db/db'
 import { changeProject } from '../../redux/changeProject/changeProjectActions';
 import { BodySlide,BotonContainer, DivList, Left, LeftButton, LiLista, LiLista2, LinkA, Lista, Lista2, ProjectsContainer, ReactIcon, Right, RightButton, Strong, UlLista} from './ProjectsBodyStyles'
 
 function ProjectsBody() {
     const [index, setIndex] = useState(0);
+    const [array, setArray] = useState(dbEn);
+    const language = useSelector((state) => state.language.english);
     const dispatch = useDispatch();
     const change = useSelector(state => state.project.toggle);
-    const array = dbEn;
-
+    // const array = dbEn;
+    useEffect(() => {
+        if (language) {
+            return  setArray(dbEn)
+          } else {
+             return setArray(dbEs)
+          }
+     
+    }, [language])
+  
 
     const chooce = (id) => {
         setIndex(id)
@@ -83,11 +93,11 @@ function ProjectsBody() {
 
            </BotonContainer>
            <BodySlide toggle={change}>
-            <Strong>Project: </Strong>{array[index].nameProject}
+            <Strong>Project: </Strong>{array[index].nameProject && array[index].nameProject}
             <br/>
             <br/>
             <Strong>Description: </Strong>
-             {array[index].description}
+             {array[index].description && array[index].description}
             <br/>
             <br/>
             <Strong>Tecnologies: </Strong>
@@ -114,7 +124,7 @@ function ProjectsBody() {
             <br/>
             <br/>
             </>)}
-            <Strong>Github: </Strong><LinkA href={array[index].gitHub}>Click here</LinkA>
+            <Strong>Github: </Strong><LinkA href={array[index].gitHub && array[index].nameProject}>Click here</LinkA>
             
             
            </BodySlide>

@@ -1,11 +1,17 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import { contactEn, copyrightEn } from '../../translate/english'
 import { contactEs, copyrightEs } from '../../translate/spanish'
 import { AFooter, FooterContainer, FooterDiv, GitHub, Linkendin,  WhatApp, FooterDiv2, Copyright, Email, ButtonFooter } from './FooterStyles'
 
 function Footer() {
     const language = useSelector(state => state.language.english)
+    const history  = useHistory()
+    const pushContact = () => {
+        history.push('/contact')
+      }
+    
     return (
         <FooterContainer>
 
@@ -30,7 +36,7 @@ function Footer() {
                 <Linkendin/>
                 </AFooter>
                 
-                <ButtonFooter>
+                <ButtonFooter onClick={pushContact}>
 
                  <Email/>
                 </ButtonFooter>
