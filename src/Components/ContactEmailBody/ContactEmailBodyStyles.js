@@ -5,6 +5,12 @@ height: 100vh;
 width: 100%;
 background-image: url('./assets/techdigi3.jpg'); 
 
+@media screen and (max-width: 600px) {
+
+    margin-bottom: 50px;
+    height: 110vh;
+  }
+
 `
 
 export const FormContact = styled.form`
@@ -22,12 +28,15 @@ border: solid 1px #ffffff;
 
 @media screen and (max-width: 600px) {
     width: 90%;
+   
   }
 `
 
 export const InputContainer = styled.div`
 display: flex;
 flex-direction: column;
+height: 100%;
+
 
 `
 
