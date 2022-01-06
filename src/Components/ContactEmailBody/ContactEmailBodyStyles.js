@@ -7,7 +7,7 @@ background-image: url('./assets/techdigi3.jpg');
 padding: 50px;
 
 @media screen and (max-width: 600px) {
-  
+  padding: 50px 0px;
   
   
 }
@@ -15,7 +15,7 @@ padding: 50px;
 `
 
 export const FormContact = styled.form`
-width: 25%;
+width: 35%;
 margin: auto;
 
 color: #ffffff;
