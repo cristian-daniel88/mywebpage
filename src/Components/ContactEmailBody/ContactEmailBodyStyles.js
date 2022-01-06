@@ -124,3 +124,13 @@ text-align: center;
 font-size: .8em;
 
 `
+
+export const RecaptchaEmail = styled.div`
+
+display: flex;
+justify-content: center;
+margin-top: 20px;
+
+`
+
+//https://developers.google.com/recaptcha/intro
