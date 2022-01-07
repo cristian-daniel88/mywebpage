@@ -16,16 +16,19 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 function ContactEmailBody() {
     const captcha = useRef(null);
-    const [sumbitOk, setSumbitOk] = useState(false);
+    const [submitOk, setSubmitOk] = useState(false);
     const [emailI, setEmailI] = useState('');
     const [emailII, setEmailII] = useState('');
     const [spanEmail, setSpanEmail] = useState("");
     const [spanEmail2, setSpanEmail2] = useState("");
+    const [captchaState, setCaptchaState] = useState('')
    
 
  
     const submitEmail = (e) => {
         e.preventDefault();
+
+        setCaptchaState('');
 
         if(!/^\S+@\S+\.\S+$/.test(emailI)) {
             
@@ -46,14 +49,21 @@ function ContactEmailBody() {
 
         setSpanEmail2('');
         setSpanEmail('');
+        if(!submitOk) {
+            setCaptchaState('captcha error');
+            return
+        }
 
+        return
         
       };
 
     const onChange = () => {
         if(captcha.current.getValue()) {
-            console.log('no robot')
+          return   setSubmitOk(true)
         }
+
+        setSubmitOk(false)
     }
 
     const handleInputEmailI = (e) => {
@@ -65,7 +75,7 @@ function ContactEmailBody() {
     }
     
     const onBlurEmailI = () => {
-
+        setCaptchaState('');
         if(!/^\S+@\S+\.\S+$/.test(emailI)) {
             
              return setSpanEmail("It's not a email.")
@@ -76,12 +86,13 @@ function ContactEmailBody() {
     }
 
     const onBlurEmailII = ()=> {
+        setCaptchaState('');
         if(!/^\S+@\S+\.\S+$/.test(emailII)) {
                     
             return   setSpanEmail2("It's not a email.")
        } 
 
-       setSpanEmail2('')
+       setSpanEmail2('');
 
     
      }
@@ -130,6 +141,7 @@ function ContactEmailBody() {
         </InputContainer>
 
         <InputContainer>
+              <EmailSpan style={{'marginTop': '20px'}}>{captchaState}</EmailSpan>
           <RecaptchaEmail>
             <ReCAPTCHA 
             ref={captcha}
