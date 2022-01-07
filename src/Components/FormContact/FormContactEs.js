@@ -89,22 +89,7 @@ function FormContactEn() {
       console.log(error);
     });
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     //
-    
-    
     
   };
   

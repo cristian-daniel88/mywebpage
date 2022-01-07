@@ -90,21 +90,7 @@ function FormContactEn() {
     .catch(function (error) {
       console.log(error);
     });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    return
-    
-    
-    
-    
-    
+      
     //
   };
   
