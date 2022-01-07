@@ -1,4 +1,4 @@
-import React, { useRef} from "react";
+import React, { useRef, useState } from "react";
 import {
   ContactContainer,
   EmailButton,
@@ -16,9 +16,38 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 function ContactEmailBody() {
     const captcha = useRef(null);
+    const [sumbitOk, setSumbitOk] = useState(false);
+    const [emailI, setEmailI] = useState('');
+    const [emailII, setEmailII] = useState('');
+    const [spanEmail, setSpanEmail] = useState("");
+    const [spanEmail2, setSpanEmail2] = useState("");
    
+
+ 
     const submitEmail = (e) => {
         e.preventDefault();
+
+        if(!/^\S+@\S+\.\S+$/.test(emailI)) {
+            
+            return setSpanEmail("It's not a email.")
+       } 
+
+       if(!/^\S+@\S+\.\S+$/.test(emailII)) {
+                    
+        return   setSpanEmail2("It's not a email.")
+       } 
+
+        if(emailI !== emailII) {
+            setSpanEmail2('not the same email adress');
+            setSpanEmail('not the same email adress');
+
+          return
+        }
+
+        setSpanEmail2('');
+        setSpanEmail('');
+
+        
       };
 
     const onChange = () => {
@@ -27,8 +56,36 @@ function ContactEmailBody() {
         }
     }
 
+    const handleInputEmailI = (e) => {
+        setEmailI(e.target.value)
+    }
+
+    const handleInputEmailII = (e) => {
+        setEmailII(e.target.value)
+    }
+    
+    const onBlurEmailI = () => {
+
+        if(!/^\S+@\S+\.\S+$/.test(emailI)) {
+            
+             return setSpanEmail("It's not a email.")
+        } 
+
+        setSpanEmail('')     
+
+    }
+
+    const onBlurEmailII = ()=> {
+        if(!/^\S+@\S+\.\S+$/.test(emailII)) {
+                    
+            return   setSpanEmail2("It's not a email.")
+       } 
+
+       setSpanEmail2('')
 
     
+     }
+     
       
 
   return (
@@ -39,26 +96,26 @@ function ContactEmailBody() {
         }}
       >
         <InputContainer>
-          <EmailLabel htmlFor="emailI">
-            Email: <EmailSpan>Email no coicide</EmailSpan>
+          <EmailLabel>
+            Email: <EmailSpan>{spanEmail}</EmailSpan>
           </EmailLabel>
+
           <EmailInput 
-          type='email'
-          id="emailI"
-          name="emailI"
-          placeholder="Your email"
+          onChange={handleInputEmailI}
+          value={emailI}
+          onBlur={onBlurEmailI}
           />
         </InputContainer>
 
         <InputContainer>
-          <EmailLabel htmlFor="emailII">
-            Repeat email: <EmailSpan>Email no coicide</EmailSpan>
+          <EmailLabel>
+            Repeat email: <EmailSpan>{spanEmail2}</EmailSpan>
           </EmailLabel>
+
           <EmailInput 
-          type='email'
-          id="emailII"
-          name="emailII"
-          placeholder="Repeat your email please"
+           onChange={handleInputEmailII}
+           value={emailII}
+           onBlur={onBlurEmailII}
           />
         </InputContainer>
 
