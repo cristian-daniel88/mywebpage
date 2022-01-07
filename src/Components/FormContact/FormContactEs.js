@@ -11,25 +11,35 @@ import {
   RecaptchaEmail,
 } from "./FormContacEnStyles";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { captchaAction, captchaErrorAction } from "../../redux/captcha/captchaActions";
 //https://developers.google.com/recaptcha/intro
 
-function FormContactEs() {
+function FormContactEn() {
   const captcha = useRef(null);
+  const dispatch = useDispatch();
+  const captchaError = useSelector(state => state.captcha.error);
+
+
 
   const [emailI, setEmailI] = useState("");
   const [emailII, setEmailII] = useState("");
   const [spanEmail, setSpanEmail] = useState("");
   const [spanEmail2, setSpanEmail2] = useState("");
 
+  
+
+
   const submitEmail = (e) => {
     e.preventDefault();
 
     if (!/^\S+@\S+\.\S+$/.test(emailI)) {
-      return setSpanEmail("No es una casilla de correo");
+      return setSpanEmail("correo no valido");
     }
 
     if (!/^\S+@\S+\.\S+$/.test(emailII)) {
-      return setSpanEmail2("No es una casilla de correo");
+      return setSpanEmail2("correo no valido");
     }
 
     if (emailI !== emailII) {
@@ -42,13 +52,42 @@ function FormContactEs() {
     setSpanEmail2("");
     setSpanEmail("");
 
-    return;
-  };
-
-  const onChange = () => {
-    if (captcha.current.getValue()) {
-      return;
+    if (captcha.current.getValue() === '') {
+      return dispatch(captchaErrorAction(true))
     }
+
+  
+
+
+    dispatch(captchaErrorAction(false));
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  };
+  
+  const onChange = () => {
+    
+    if (captcha.current.getValue()) {
+     
+     
+    }
+    
   };
 
   const handleInputEmailI = (e) => {
@@ -61,14 +100,14 @@ function FormContactEs() {
 
   const onBlurEmailI = () => {
     if (!/^\S+@\S+\.\S+$/.test(emailI)) {
-      return setSpanEmail("No es un correo válido");
+      return setSpanEmail("no es un correo valido");
     }
     setSpanEmail("");
   };
 
   const onBlurEmailII = () => {
     if (!/^\S+@\S+\.\S+$/.test(emailII)) {
-      return setSpanEmail2("No es un correo válido");
+      return setSpanEmail2("no es un correo valido");
     }
     setSpanEmail2("");
   };
@@ -76,12 +115,12 @@ function FormContactEs() {
   const cleanErrorWithClickI = () => {
     setSpanEmail("");
     return
-  };
+
+  }
 
   const cleanErrorWithClickII = () => {
     setSpanEmail2("");
     return
-    
 
   }
 
@@ -95,32 +134,32 @@ function FormContactEs() {
       >
         <InputContainer>
           <EmailLabel>
-            Email: <EmailSpan>{spanEmail}</EmailSpan>
+            Correo Electronico: <EmailSpan>{spanEmail}</EmailSpan>
           </EmailLabel>
 
           <EmailInput
             onChange={handleInputEmailI}
             value={emailI}
             onBlur={onBlurEmailI}
-            onClick={cleanErrorWithClickI}
+            onClick={cleanErrorWithClickI }
           />
         </InputContainer>
 
         <InputContainer>
           <EmailLabel>
-            Repeat email: <EmailSpan>{spanEmail2}</EmailSpan>
+            Repeti tu correo electronico: <EmailSpan>{spanEmail2}</EmailSpan>
           </EmailLabel>
 
           <EmailInput
             onChange={handleInputEmailII}
             value={emailII}
             onBlur={onBlurEmailII}
-            onClick={cleanErrorWithClickII}
+            onClick={cleanErrorWithClickII }
           />
         </InputContainer>
 
         <InputContainer>
-          <EmailLabel>Subject:</EmailLabel>
+          <EmailLabel>Asunto: </EmailLabel>
           <EmailInput />
         </InputContainer>
 
@@ -131,7 +170,8 @@ function FormContactEs() {
 
         <InputContainer>
           <EmailSpan style={{ marginTop: "20px", fontSize: "1.5em" }}>
-            {""}
+            {captchaError && 'Captcha Error'}
+            
           </EmailSpan>
           <RecaptchaEmail>
             <ReCAPTCHA
@@ -150,4 +190,4 @@ function FormContactEs() {
   );
 }
 
-export default FormContactEs;
+export default FormContactEn;
