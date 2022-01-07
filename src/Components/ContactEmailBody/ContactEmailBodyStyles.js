@@ -59,6 +59,9 @@ outline: none;
 height: 23px;
 border-radius: 5px;
 margin-bottom: 20px;
+background-color: #f9e6e6;
+
+border: solid 1px white;
 &:focus  {
   
     
@@ -104,6 +107,7 @@ height: 300px;
 resize: none;
 border: none;
 outline: none;
+background-color: #f9e6e6;
 
 border-radius: 5px;
 
