@@ -11,10 +11,11 @@ import {
   RecaptchaEmail,
 } from "./FormContacEnStyles";
 import ReCAPTCHA from "react-google-recaptcha";
+//https://developers.google.com/recaptcha/intro
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { captchaAction, captchaErrorAction } from "../../redux/captcha/captchaActions";
-//https://developers.google.com/recaptcha/intro
+const axios = require('axios');
 
 function FormContactEn() {
   const captcha = useRef(null);
@@ -27,6 +28,12 @@ function FormContactEn() {
   const [emailII, setEmailII] = useState("");
   const [spanEmail, setSpanEmail] = useState("");
   const [spanEmail2, setSpanEmail2] = useState("");
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+
+
+  
+  
 
   
 
@@ -61,7 +68,28 @@ function FormContactEn() {
 
     dispatch(captchaErrorAction(false));
 
+    // axios
+    const data = {
+      email: emailI,
+      subject: subject,
+      text: body
+    
+    };
 
+    const config = {
+      method: 'post',
+      url: 'http://localhost:8080/api/emails',
+      headers: { },
+      data : data
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
     
     
     
@@ -71,14 +99,13 @@ function FormContactEn() {
     
     
     
+    return
     
     
     
     
     
-    
-    
-    
+    //
   };
   
   const onChange = () => {
@@ -96,6 +123,16 @@ function FormContactEn() {
 
   const handleInputEmailII = (e) => {
     setEmailII(e.target.value);
+  };
+
+  
+  const handleInputSubject = (e) => {
+    setSubject(e.target.value);
+  };
+
+  
+  const handleInputBody = (e) => {
+    setBody(e.target.value);
   };
 
   const onBlurEmailI = () => {
@@ -160,12 +197,18 @@ function FormContactEn() {
 
         <InputContainer>
           <EmailLabel>Subject:</EmailLabel>
-          <EmailInput />
+          <EmailInput 
+           onChange={handleInputSubject}
+           value={subject}
+          />
         </InputContainer>
 
         <InputContainer>
           <EmailLabel></EmailLabel>
-          <EmailTextArea />
+          <EmailTextArea 
+          onChange={handleInputBody}
+          value={body}
+          />
         </InputContainer>
 
         <InputContainer>
