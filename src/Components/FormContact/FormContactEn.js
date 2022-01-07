@@ -11,15 +11,25 @@ import {
   RecaptchaEmail,
 } from "./FormContacEnStyles";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { captchaAction, captchaErrorAction } from "../../redux/captcha/captchaActions";
 //https://developers.google.com/recaptcha/intro
 
 function FormContactEn() {
   const captcha = useRef(null);
+  const dispatch = useDispatch();
+  const captchaError = useSelector(state => state.captcha.error);
+
+
 
   const [emailI, setEmailI] = useState("");
   const [emailII, setEmailII] = useState("");
   const [spanEmail, setSpanEmail] = useState("");
   const [spanEmail2, setSpanEmail2] = useState("");
+
+  
+
 
   const submitEmail = (e) => {
     e.preventDefault();
@@ -42,13 +52,42 @@ function FormContactEn() {
     setSpanEmail2("");
     setSpanEmail("");
 
-    return;
-  };
-
-  const onChange = () => {
-    if (captcha.current.getValue()) {
-      return;
+    if (captcha.current.getValue() === '') {
+      return dispatch(captchaErrorAction(true))
     }
+
+  
+
+
+    dispatch(captchaErrorAction(false));
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  };
+  
+  const onChange = () => {
+    
+    if (captcha.current.getValue()) {
+     
+     
+    }
+    
   };
 
   const handleInputEmailI = (e) => {
@@ -84,6 +123,7 @@ function FormContactEn() {
     return
 
   }
+
 
   return (
     <ContactContainer>
@@ -130,7 +170,8 @@ function FormContactEn() {
 
         <InputContainer>
           <EmailSpan style={{ marginTop: "20px", fontSize: "1.5em" }}>
-            {""}
+            {captchaError && 'Captcha Error'}
+            
           </EmailSpan>
           <RecaptchaEmail>
             <ReCAPTCHA

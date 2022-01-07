@@ -13,7 +13,7 @@ import {
 import ReCAPTCHA from "react-google-recaptcha";
 //https://developers.google.com/recaptcha/intro
 
-function FormContactEn() {
+function FormContactEs() {
   const captcha = useRef(null);
 
   const [emailI, setEmailI] = useState("");
@@ -61,24 +61,30 @@ function FormContactEn() {
 
   const onBlurEmailI = () => {
     if (!/^\S+@\S+\.\S+$/.test(emailI)) {
-      return setSpanEmail("It's not a email.");
+      return setSpanEmail("No es un correo válido");
     }
     setSpanEmail("");
   };
 
   const onBlurEmailII = () => {
     if (!/^\S+@\S+\.\S+$/.test(emailII)) {
-      return setSpanEmail2("It's not a email.");
+      return setSpanEmail2("No es un correo válido");
     }
     setSpanEmail2("");
   };
 
-  const cleanErrorWithClick = () => {
-    setSpanEmail2("");
+  const cleanErrorWithClickI = () => {
     setSpanEmail("");
+    return
+  };
+
+  const cleanErrorWithClickII = () => {
+    setSpanEmail2("");
+    return
     
 
   }
+
 
   return (
     <ContactContainer>
@@ -96,7 +102,7 @@ function FormContactEn() {
             onChange={handleInputEmailI}
             value={emailI}
             onBlur={onBlurEmailI}
-            onClick={cleanErrorWithClick}
+            onClick={cleanErrorWithClickI}
           />
         </InputContainer>
 
@@ -109,7 +115,7 @@ function FormContactEn() {
             onChange={handleInputEmailII}
             value={emailII}
             onBlur={onBlurEmailII}
-            onClick={cleanErrorWithClick}
+            onClick={cleanErrorWithClickII}
           />
         </InputContainer>
 
@@ -144,4 +150,4 @@ function FormContactEn() {
   );
 }
 
-export default FormContactEn;
+export default FormContactEs;
