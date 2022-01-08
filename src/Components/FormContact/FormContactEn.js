@@ -181,7 +181,7 @@ function FormContactEn() {
               value={emailI}
               onBlur={onBlurEmailI}
               onClick={cleanErrorWithClickI }
-              placeholder="Your email address"
+              placeholder="Your email address. Eg. example@example.com"
             />
           </InputContainer>
   
