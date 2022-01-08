@@ -16,12 +16,15 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { captchaAction, captchaErrorAction } from "../../redux/captcha/captchaActions";
 import { changeDoneAction } from "../../redux/done/doneActions";
+import Done from "../Done/Done";
 const axios = require('axios');
+
 
 function FormContactEn() {
   const captcha = useRef(null);
   const dispatch = useDispatch();
   const captchaError = useSelector(state => state.captcha.error);
+  const done = useSelector(state => state.done.done);
 
 
 
@@ -156,71 +159,81 @@ function FormContactEn() {
 
   return (
     <ContactContainer>
-      <FormContact
-        onSubmit={(e) => {
-          submitEmail(e);
-        }}
-      >
-        <InputContainer>
-          <EmailLabel>
-            Correo Electronico: <EmailSpan>{spanEmail}</EmailSpan>
-          </EmailLabel>
-
-          <EmailInput
-            onChange={handleInputEmailI}
-            value={emailI}
-            onBlur={onBlurEmailI}
-            onClick={cleanErrorWithClickI }
-          />
-        </InputContainer>
-
-        <InputContainer>
-          <EmailLabel>
-            Repeti tu correo electronico: <EmailSpan>{spanEmail2}</EmailSpan>
-          </EmailLabel>
-
-          <EmailInput
-            onChange={handleInputEmailII}
-            value={emailII}
-            onBlur={onBlurEmailII}
-            onClick={cleanErrorWithClickII }
-          />
-        </InputContainer>
-
-        <InputContainer>
-          <EmailLabel>Asunto: </EmailLabel>
-          <EmailInput 
-          onChange={handleInputSubject}
-          value={subject}
-          />
-        </InputContainer>
-
-        <InputContainer>
-          <EmailLabel></EmailLabel>
-          <EmailTextArea 
-          onChange={handleInputBody}
-          value={body}
-          />
-        </InputContainer>
-
-        <InputContainer>
-          <EmailSpan style={{ marginTop: "20px", fontSize: "1.5em" }}>
-            {captchaError && 'Captcha Error'}
-            
-          </EmailSpan>
-          <RecaptchaEmail>
-            <ReCAPTCHA
-              ref={captcha}
-              sitekey="6LddiPYdAAAAAFgzPcvmCQHo_zqmzkH4AmKK9Ny-"
-              onChange={onChange}
+      {
+        done 
+        ?
+        (<Done/>)
+        :
+        (
+          <FormContact
+          onSubmit={(e) => {
+            submitEmail(e);
+          }}
+        >
+          <InputContainer>
+            <EmailLabel>
+              Correo Electronico: <EmailSpan>{spanEmail}</EmailSpan>
+            </EmailLabel>
+  
+            <EmailInput
+              onChange={handleInputEmailI}
+              value={emailI}
+              onBlur={onBlurEmailI}
+              onClick={cleanErrorWithClickI }
             />
-          </RecaptchaEmail>
-        </InputContainer>
+          </InputContainer>
+  
+          <InputContainer>
+            <EmailLabel>
+              Repeti tu correo electronico: <EmailSpan>{spanEmail2}</EmailSpan>
+            </EmailLabel>
+  
+            <EmailInput
+              onChange={handleInputEmailII}
+              value={emailII}
+              onBlur={onBlurEmailII}
+              onClick={cleanErrorWithClickII }
+            />
+          </InputContainer>
+  
+          <InputContainer>
+            <EmailLabel>Asunto: </EmailLabel>
+            <EmailInput 
+            onChange={handleInputSubject}
+            value={subject}
+            />
+          </InputContainer>
+  
+          <InputContainer>
+            <EmailLabel></EmailLabel>
+            <EmailTextArea 
+            onChange={handleInputBody}
+            value={body}
+            />
+          </InputContainer>
+  
+          <InputContainer>
+            <EmailSpan style={{ marginTop: "20px", fontSize: "1.5em" }}>
+              {captchaError && 'Captcha Error'}
+              
+            </EmailSpan>
+            <RecaptchaEmail>
+              <ReCAPTCHA
+                ref={captcha}
+                sitekey="6LddiPYdAAAAAFgzPcvmCQHo_zqmzkH4AmKK9Ny-"
+                onChange={onChange}
+              />
+            </RecaptchaEmail>
+          </InputContainer>
+  
+          <InputContainer>
+            <EmailButton>Send</EmailButton>
+          </InputContainer>
+        </FormContact>
 
-        <InputContainer>
-          <EmailButton>Send</EmailButton>
-        </InputContainer>
-      </FormContact>
+        ) 
+      }
+     
     </ContactContainer>
   );
 }
