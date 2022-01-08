@@ -90,6 +90,13 @@ function FormContactEn() {
     });
     
     //
+
+    dispatch(changeDoneAction());
+
+    setTimeout(() => {
+      dispatch(changeDoneAction());
+    }, 3000);
+
     
   };
   

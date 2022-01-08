@@ -8,6 +8,7 @@ import burguerMenuReducer from "./burguerMenu/burguerMenuReducer";
 import changeProjectReducer from "./changeProject/changeProjectReducer";
 import captchaReducer from "./captcha/captchaReducer";
 import whatsAppEmailReducer from "./whatsappEmail/whatsappEmailReducer";
+import doneReducer from "./done/doneReducer";
 
 
 const persistConfig = {
@@ -21,7 +22,8 @@ const persistConfig = {
       burger: burguerMenuReducer,
       project: changeProjectReducer,
       captcha: captchaReducer,
-      email: whatsAppEmailReducer
+      email: whatsAppEmailReducer,
+      done: doneReducer
   
    
    
