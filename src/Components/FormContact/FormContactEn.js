@@ -182,6 +182,7 @@ function FormContactEn() {
               onBlur={onBlurEmailI}
               onClick={cleanErrorWithClickI }
               placeholder="Your email address. Eg. example@example.com"
+              type='email'
             />
           </InputContainer>
   
@@ -195,7 +196,8 @@ function FormContactEn() {
               value={emailII}
               onBlur={onBlurEmailII}
               onClick={cleanErrorWithClickII }
-              placeholder="Please, repeat your email address again"
+              placeholder="Please, repeat your email address again."
+              type="email"
             />
           </InputContainer>
   
@@ -204,7 +206,7 @@ function FormContactEn() {
             <EmailInput 
              onChange={handleInputSubject}
              value={subject}
-             placeholder="Whrite a subject (optional)"
+             placeholder="Whrite a subject (optional)."
             />
           </InputContainer>
   
@@ -213,7 +215,7 @@ function FormContactEn() {
             <EmailTextArea 
             onChange={handleInputBody}
             value={body}
-            placeholder="Whrite a message"
+            placeholder="Whrite a message."
             />
           </InputContainer>
   
