@@ -195,7 +195,7 @@ function FormContactEn() {
               value={emailII}
               onBlur={onBlurEmailII}
               onClick={cleanErrorWithClickII }
-              placeholder="Please, repeat you email address again"
+              placeholder="Please, repeat your email address again"
             />
           </InputContainer>
   
