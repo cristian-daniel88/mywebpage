@@ -12,7 +12,7 @@ justify-content: center;
 align-items: center;
 padding: 5px;
 border-radius: 5px;
-border: solid 1px #ffffff;
+
 background-color: black;
 
 
@@ -22,9 +22,3 @@ background-color: black;
   }
 `
 
-
-export const hDone = styled.h4`
-font-size: 50px;
-color: violet;
-
-`
