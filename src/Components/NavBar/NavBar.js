@@ -29,8 +29,12 @@ import {
 } from "./NavBarStyles";
 import { burguerMenu } from "../../redux/burguerMenu/burgerMenuActions";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { changeEmailAction } from "../../redux/whatsappEmail/whatsappEmailActions";
 
 function NavBar() {
+  
+  const stateEmail = useSelector(state => state.email.email);
+    
  const dispatch = useDispatch();
  const language = useSelector(state => state.language.english);
  const [hover, setHover] = useState(false);
@@ -50,19 +54,36 @@ function NavBar() {
   }
 
   const pushProfile = () => {
-      history.push('/profile')
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
+      history.push('/profile');
   }
 
   const pushHome = () => {
-    history.push('/')
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
+    history.push('/');
   }
 
   const pushProjects = () => {
-    history.push('/projects')
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
+    history.push('/projects');
+
   }
 
   const pushContact = () => {
-    history.push('/contact')
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
+    history.push('/contact');
   }
 
 

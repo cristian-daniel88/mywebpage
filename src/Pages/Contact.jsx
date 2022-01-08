@@ -5,7 +5,7 @@ import ContactEmailBody from '../Components/ContactEmailBody/ContactEmailBody'
 import WhatsAppOrEmail from '../Components/WhatsAppOrEmail/WhatsAppOrEmail';
 
 function Contact() {
-    const dispatch = useDispatch();
+
     const state = useSelector(state => state.email.email);
     
 

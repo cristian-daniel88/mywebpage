@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { burguerMenu } from "../../redux/burguerMenu/burgerMenuActions";
 import { changeLanguage } from "../../redux/language/languageActions";
+import { changeEmailAction } from "../../redux/whatsappEmail/whatsappEmailActions";
 import {
   enNavItem1,
   enNavItem2,
@@ -41,7 +42,7 @@ function ToggleMenu() {
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.english);
   const history = useHistory();
-
+  const stateEmail = useSelector(state => state.email.email);
  
 
   const toggleMenu = () => {
@@ -53,21 +54,37 @@ function ToggleMenu() {
   };
 
   const pushHome = () => {
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
     dispatch(burguerMenu());
     history.push("/");
   };
 
   const pushProfile = () => {
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
     dispatch(burguerMenu());
     history.push("/profile");
   };
 
   const pushProjects = ()=> {
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
     dispatch(burguerMenu());
     history.push("/projects");
   }
 
   const pushContact = () => {
+    if (stateEmail) {
+      
+      dispatch(changeEmailAction())
+    }
     dispatch(burguerMenu());
     history.push('/contact')
   }

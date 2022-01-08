@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { changeEmailAction } from '../../redux/whatsappEmail/whatsappEmailActions'
-import { WhatsAppOrEmailBotones, WhatsAppOrEmailContainer } from './WhatsAppOrEmailStyle'
+
+import { EmailContact, WhatAppContact, WhatsAppOrEmailA, WhatsAppOrEmailBotones, WhatsAppOrEmailContainer } from './WhatsAppOrEmailStyle'
 
 function WhatsAppOrEmail() {
     const dispatch = useDispatch()
@@ -12,8 +13,8 @@ function WhatsAppOrEmail() {
 
     return (
         <WhatsAppOrEmailContainer>
-            <WhatsAppOrEmailBotones>Whats app</WhatsAppOrEmailBotones>
-            <WhatsAppOrEmailBotones onClick={changeToEmail}>Email</WhatsAppOrEmailBotones>
+            <WhatsAppOrEmailA href='' target='_blank'><div style={{'padding' : '5% 0'}}>Whats App</div> <WhatAppContact/></WhatsAppOrEmailA> 
+            <WhatsAppOrEmailBotones onClick={changeToEmail}><div style={{'padding' : '5% 0'}}>Email</div><EmailContact/></WhatsAppOrEmailBotones>
         </WhatsAppOrEmailContainer>
     )
 }
