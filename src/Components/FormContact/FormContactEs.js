@@ -177,7 +177,7 @@ function FormContactEn() {
         >
           <InputContainer>
             <EmailLabel>
-              Correo Electronico: <EmailSpan>{spanEmail}</EmailSpan>
+             Tu correo electronico: <EmailSpan>{spanEmail}</EmailSpan>
             </EmailLabel>
   
             <EmailInput
