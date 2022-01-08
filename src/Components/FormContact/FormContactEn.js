@@ -75,8 +75,9 @@ function FormContactEn() {
     };
 
     const config = {
-      method: 'post',
+      method: 'put',
       url: 'https://cristianherreradevapi.herokuapp.com/api/emails',
+      
       headers: { },
       data : data
     };
@@ -96,6 +97,9 @@ function FormContactEn() {
     setTimeout(() => {
       dispatch(changeDoneAction());
     }, 3000);
+
+    setSubject('')
+    setBody('')
 
     return
   };
