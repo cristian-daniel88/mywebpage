@@ -185,7 +185,7 @@ function FormContactEn() {
               value={emailI}
               onBlur={onBlurEmailI}
               onClick={cleanErrorWithClickI }
-              placeholder="Escribe tu correo electronico. Por ejemplo alguien@alguien.com."
+              placeholder="Escribe tu correo electronico. Ej. alguien@alguien.com."
               type='email'
             />
           </InputContainer>
