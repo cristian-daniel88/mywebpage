@@ -177,7 +177,7 @@ function FormContactEn() {
         >
           <InputContainer>
             <EmailLabel>
-             Tu correo electronico: <EmailSpan>{spanEmail}</EmailSpan>
+             Tu correo electrónico: <EmailSpan>{spanEmail}</EmailSpan>
             </EmailLabel>
   
             <EmailInput
@@ -192,7 +192,7 @@ function FormContactEn() {
   
           <InputContainer>
             <EmailLabel>
-              Repeti tu correo electronico: <EmailSpan>{spanEmail2}</EmailSpan>
+              Repetí tu correo electrónico: <EmailSpan>{spanEmail2}</EmailSpan>
             </EmailLabel>
   
             <EmailInput
