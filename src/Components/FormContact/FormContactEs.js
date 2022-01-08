@@ -17,6 +17,7 @@ import { useSelector } from "react-redux";
 import { captchaAction, captchaErrorAction } from "../../redux/captcha/captchaActions";
 import { changeDoneAction } from "../../redux/done/doneActions";
 import Done from "../Done/Done";
+import { changeSubmitAction } from "../../redux/pressSubmit/pressSubmitActions";
 const axios = require('axios');
 
 
@@ -25,6 +26,7 @@ function FormContactEn() {
   const dispatch = useDispatch();
   const captchaError = useSelector(state => state.captcha.error);
   const done = useSelector(state => state.done.done);
+  const submit = useSelector(state => state.submit.submit);
 
 
 
@@ -42,33 +44,35 @@ function FormContactEn() {
   const submitEmail = (e) => {
     e.preventDefault();
 
+    
     if (!/^\S+@\S+\.\S+$/.test(emailI)) {
       return setSpanEmail("correo no valido");
     }
-
+    
     if (!/^\S+@\S+\.\S+$/.test(emailII)) {
       return setSpanEmail2("correo no valido");
     }
-
+    
     if (emailI !== emailII) {
       setSpanEmail2("los correos no coinciden");
       setSpanEmail("los correos no coinciden");
-
+      
       return;
     }
-
+    
     setSpanEmail2("");
     setSpanEmail("");
-
+    
     if (captcha.current.getValue() === '') {
       return dispatch(captchaErrorAction(true))
     }
-
-  
-
-
+    
+    
+    
+    
+    dispatch(changeSubmitAction())
     dispatch(captchaErrorAction(false));
-
+    
     // axios
     
     const data = {
@@ -88,6 +92,7 @@ function FormContactEn() {
     axios(config)
     .then(function (response) {
       dispatch(changeDoneAction());
+      dispatch(changeSubmitAction());
       console.log(JSON.stringify(response.data));
     })
     .catch(function (error) {
@@ -239,7 +244,7 @@ function FormContactEn() {
           </InputContainer>
   
           <InputContainer>
-            <EmailButton>Send</EmailButton>
+            <EmailButton disabled={submit}>Send</EmailButton>
           </InputContainer>
         </FormContact>
 

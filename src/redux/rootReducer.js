@@ -9,6 +9,7 @@ import changeProjectReducer from "./changeProject/changeProjectReducer";
 import captchaReducer from "./captcha/captchaReducer";
 import whatsAppEmailReducer from "./whatsappEmail/whatsappEmailReducer";
 import doneReducer from "./done/doneReducer";
+import pressSubmitReducer from "./pressSubmit/pressSubmitReducer";
 
 
 const persistConfig = {
@@ -23,7 +24,8 @@ const persistConfig = {
       project: changeProjectReducer,
       captcha: captchaReducer,
       email: whatsAppEmailReducer,
-      done: doneReducer
+      done: doneReducer,
+      submit: pressSubmitReducer,
   
    
    
