@@ -84,6 +84,7 @@ function FormContactEn() {
     
     axios(config)
     .then(function (response) {
+      dispatch(changeDoneAction());
       console.log(JSON.stringify(response.data));
     })
     .catch(function (error) {
@@ -92,7 +93,6 @@ function FormContactEn() {
     
     //
 
-    dispatch(changeDoneAction());
 
     setTimeout(() => {
       dispatch(changeDoneAction());
