@@ -76,7 +76,7 @@ function FormContactEn() {
 
     const config = {
       method: 'post',
-      url: 'http://localhost:8080/api/emails',
+      url: 'https://cristianherreradevapi.herokuapp.com/api/emails',
       headers: { },
       data : data
     };

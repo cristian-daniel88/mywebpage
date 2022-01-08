@@ -16,7 +16,7 @@ padding: 50px;
 `
 
 export const FormContact = styled.form`
-width: 35%;
+width: 65%;
 margin: auto;
 
 color: #ffffff;

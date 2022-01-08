@@ -7,6 +7,7 @@ import languageReducer from "./language/languageReducer";
 import burguerMenuReducer from "./burguerMenu/burguerMenuReducer";
 import changeProjectReducer from "./changeProject/changeProjectReducer";
 import captchaReducer from "./captcha/captchaReducer";
+import whatsAppEmailReducer from "./whatsappEmail/whatsappEmailReducer";
 
 
 const persistConfig = {
@@ -19,7 +20,8 @@ const persistConfig = {
       language: languageReducer,
       burger: burguerMenuReducer,
       project: changeProjectReducer,
-      captcha: captchaReducer
+      captcha: captchaReducer,
+      email: whatsAppEmailReducer
   
    
    
