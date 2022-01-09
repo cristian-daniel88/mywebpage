@@ -66,7 +66,8 @@ font-size: 2em;
 transform: rotate(90deg);
 margin: 5px;
 cursor: pointer;
-
+transform: ${(props) => (props.toggle ? "rotate(90%)" : "translateX(0%)")};
+transition: ${(props) => (props.toggle ? "transform 1s ease-in-out" : "transform 1s cubic-bezier(.94,-0.05,1,1)")};
 `;
 export const DetailsLanguage = styled.details`
 

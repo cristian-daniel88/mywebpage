@@ -144,7 +144,7 @@ function ToggleMenu() {
 
           <ButtonBurguerContainer>
             <ButtonMenu onClick={toggleMenu} >
-              <ButtonBurguer />
+              <ButtonBurguer toggle={toggle}/>
             </ButtonMenu>
           </ButtonBurguerContainer>
         </NavBurguer>
