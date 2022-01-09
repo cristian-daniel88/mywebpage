@@ -18,7 +18,7 @@ function ScreenPhoto() {
                     <CloseIcon onClick={handScreen}/>
                 </ContainerIcon>
 
-                <ImagenCv src='./assets/foto-cv.jpg'/>
+                <ImagenCv src='./assets/foto-cv.jpg' alt='Cristian Daniel Herrera, web developer'/>
             </ScreenMarco>
         </ScreenContainer>
     )

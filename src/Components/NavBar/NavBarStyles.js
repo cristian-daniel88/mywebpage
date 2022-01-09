@@ -84,7 +84,7 @@ height: auto;
 `
 
 export const MenuBurguer = styled(FaBars)`
-  font-size: x-large;
+  font-size: 3em;
   cursor: pointer;
   display: none;
   border: solid 0.5px white;
