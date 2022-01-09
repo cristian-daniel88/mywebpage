@@ -19,7 +19,7 @@ export const copyrightEn = "Copyright 2022 Cristian Daniel Herrera, web develope
 
 // Profile
 export const h4En1 = "PERSONAL INFORMATION";
-export const boldEn1 = "Full-Name: ";
+export const boldEn1 = "Fullname: ";
 export const pEn1 = "Cristian Daniel Herrera";
 export const boldEn6 = "Nationality: ";
 export const pEn12 = "Argentine"

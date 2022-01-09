@@ -41,16 +41,16 @@ function FormContactEn() {
   const submitEmail = (e) => {
     e.preventDefault();
     if (!/^\S+@\S+\.\S+$/.test(emailI)) {
-      return setSpanEmail("It's not a email.");
+      return setSpanEmail("invalid");
     }
     
     if (!/^\S+@\S+\.\S+$/.test(emailII)) {
-      return setSpanEmail2("It's not a email.");
+      return setSpanEmail2("invalid");
     }
     
     if (emailI !== emailII) {
-      setSpanEmail2("not the same email adress");
-      setSpanEmail("not the same email adress");
+      setSpanEmail2("please check your email address");
+      setSpanEmail("please check your email address");
       
       return;
     }
@@ -135,14 +135,14 @@ function FormContactEn() {
 
   const onBlurEmailI = () => {
     if (!/^\S+@\S+\.\S+$/.test(emailI)) {
-      return setSpanEmail("It's not a email.");
+      return setSpanEmail("invalid");
     }
     setSpanEmail("");
   };
 
   const onBlurEmailII = () => {
     if (!/^\S+@\S+\.\S+$/.test(emailII)) {
-      return setSpanEmail2("It's not a email.");
+      return setSpanEmail2("invalid");
     }
     setSpanEmail2("");
   };
@@ -209,7 +209,7 @@ function FormContactEn() {
             <EmailInput 
              onChange={handleInputSubject}
              value={subject}
-             placeholder="Whrite a subject (optional)."
+             placeholder="Write a subject (optional)."
             />
           </InputContainer>
   
@@ -218,7 +218,7 @@ function FormContactEn() {
             <EmailTextArea 
             onChange={handleInputBody}
             value={body}
-            placeholder="Whrite a message."
+            placeholder="Write a message."
             />
           </InputContainer>
   

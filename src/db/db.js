@@ -1,7 +1,7 @@
 export  const dbEs = [
     {
       id: 1,
-      nameProject: "Amazona E-ccomerce",
+      nameProject: "Amazona e-commerce",
       description: "Espania ipsum dolor sit amet consectetur adipisicing elit. Autem, impedit, voluptate illum recusandae aut iste quisquam sed consectetur enim animi sint nisi voluptates eius porro. Sapiente unde aliquam inventore ut temporibus, similique enim quae error qui atque maxime voluptate magnam? Facilis ab placeat optio, id sed, tenetur repellendus sequi vero voluptatibus maiores beatae dolorem ea laboriosam fuga mollitia! Reiciendis, omnis!",
       tecnologies: "Mongo, Express, React, Nodejs, SockeIo, Auth0, Redux",
       gitHub: "https://github.com/cristian-daniel88/amazonaMVC",
@@ -57,7 +57,7 @@ export  const dbEs = [
   export  const dbEn = [
     {
       id: 1,
-      nameProject: "Amazona E-ccomerce",
+      nameProject: "Amazona e-commerce",
       description: "amazona ipsum dolor sit amet consectetur adipisicing elit. Autem, impedit, voluptate illum recusandae aut iste quisquam sed consectetur enim animi sint nisi voluptates eius porro. Sapiente unde aliquam inventore ut temporibus, similique enim quae error qui atque maxime voluptate magnam? Facilis ab placeat optio, id sed, tenetur repellendus sequi vero voluptatibus maiores beatae dolorem ea laboriosam fuga mollitia! Reiciendis, omnis!",
       tecnologies: "Mongo, Express, React, Nodejs, SockeIo, Auth0, Redux",
       gitHub: "https://github.com/cristian-daniel88/amazonaMVC",
