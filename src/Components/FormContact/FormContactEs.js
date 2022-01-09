@@ -237,7 +237,7 @@ function FormContactEn() {
             <RecaptchaEmail>
               <ReCAPTCHA
                 ref={captcha}
-                sitekey="6LddiPYdAAAAAFgzPcvmCQHo_zqmzkH4AmKK9Ny-"
+                sitekey="6Ld4XP8dAAAAAEv6mKPZpk_iKqHTIMXTUy3D6eym"
                 onChange={onChange}
               />
             </RecaptchaEmail>
