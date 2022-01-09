@@ -10,10 +10,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 5px;
+
 border-radius: 5px;
 
-background-color: black;
+background-color: transparent;
 
 
 @media screen and (max-width: 600px) {
