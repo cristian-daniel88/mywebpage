@@ -6,7 +6,7 @@ function Done() {
         <DoneContact>
             <div>
                 <h4 style={{'color': 'violet', 'fontSize': '3em'}}>
-                    Done!
+                    SENT
                 </h4>
             </div>
         </DoneContact>
