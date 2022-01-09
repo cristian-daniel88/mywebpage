@@ -61,8 +61,10 @@ height: 23px;
 border-radius: 5px;
 margin-bottom: 20px;
 background-color: #f9e6e6;
-
+padding: 1px;
 border: solid 1px white;
+
+
 &:focus  {
   
     
@@ -109,6 +111,8 @@ resize: none;
 border: none;
 outline: none;
 background-color: #f9e6e6;
+padding: 4px;
+font-weight: 800;
 
 border-radius: 5px;
 
