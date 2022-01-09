@@ -10,6 +10,7 @@ import captchaReducer from "./captcha/captchaReducer";
 import whatsAppEmailReducer from "./whatsappEmail/whatsappEmailReducer";
 import doneReducer from "./done/doneReducer";
 import pressSubmitReducer from "./pressSubmit/pressSubmitReducer";
+import screenReducer from "./screen/screenReducer";
 
 
 const persistConfig = {
@@ -26,9 +27,7 @@ const persistConfig = {
       email: whatsAppEmailReducer,
       done: doneReducer,
       submit: pressSubmitReducer,
-  
-   
-   
+      screen: screenReducer
   });
   
   export default persistReducer(persistConfig, rootReducer);

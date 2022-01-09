@@ -26,7 +26,7 @@ function FormContactEn() {
   const captchaError = useSelector(state => state.captcha.error);
   const done = useSelector(state => state.done.done);
   const submit = useSelector(state => state.submit.submit);
-  console.log(submit);
+
 
 
 
@@ -86,7 +86,7 @@ function FormContactEn() {
     axios(config)
     .then(function (response) {
       dispatch(changeDoneAction());
-      //console.log(JSON.stringify(response.data));
+      console.log(JSON.stringify(response.data));
     })
     .catch(function (error) {
       console.log(error);

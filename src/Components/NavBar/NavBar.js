@@ -30,6 +30,8 @@ import {
 import { burguerMenu } from "../../redux/burguerMenu/burgerMenuActions";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { changeEmailAction } from "../../redux/whatsappEmail/whatsappEmailActions";
+import { screenAction } from "../../redux/screen/screenReducerAction";
+
 
 function NavBar() {
   
@@ -38,7 +40,13 @@ function NavBar() {
  const dispatch = useDispatch();
  const language = useSelector(state => state.language.english);
  const [hover, setHover] = useState(false);
- const history = useHistory()
+ const history = useHistory();
+ const screen = useSelector(state => state.screen.screen);
+ 
+
+ const handScreen = () => {
+     dispatch(screenAction())
+ }
 
 
   const switchLanguage = () => {
@@ -90,8 +98,9 @@ function NavBar() {
 
   return (
     <NavBarContainer>
+     
       <Profile>
-        <PhotoContainer onClick={pushHome}/>
+        <PhotoContainer onClick={handScreen}/>
 
         <Details>
           <Name onClick={pushHome}>Cristian Daniel Herrera</Name>

@@ -9,18 +9,21 @@ import ToggleMenu from './Components/ToggleMenu/ToggleMenu';
 import Profile from './Pages/Profile';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
+import ScreenPhoto from './Components/ScreenPhoto/ScreenPhoto';
+
 
 
 function App() {
 
 
 
-
+  
   return (
     <>
-    <GlobalStyles/>
     
+    <GlobalStyles/>
     <NavBar/>
+    <ScreenPhoto/>
    <ToggleMenu/>
     <Top/>
     <Switch>
