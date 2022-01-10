@@ -16,6 +16,8 @@ import {
   Ul,
 } from "./ProfileBodyStyles";
 
+import ra from '../../uploads/ra.pdf'
+
 function ProfileBody() {
   const language = useSelector(state => state.language.english)
   return (
@@ -118,7 +120,7 @@ function ProfileBody() {
           <br/>
           <br/>
           <DownloadButton>
-            <Download href="/assets/r.pdf" download>
+            <Download href={ra} download>
                 {language ? downloadCvEn : downloadCvEs}
             </Download>
           </DownloadButton>
