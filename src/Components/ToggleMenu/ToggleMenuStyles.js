@@ -10,7 +10,7 @@ position: fixed;
 z-index: 11;
 
 transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")};
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 
 @media screen and (min-width: 600px) {
     display: none;
