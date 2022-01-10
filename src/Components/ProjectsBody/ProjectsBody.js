@@ -126,7 +126,7 @@ function ProjectsBody() {
             <br/>
             <br/>
             </>)}
-            <Strong>Github: </Strong><LinkA href={array[index].gitHub && array[index].nameProject}>{language ? pEn4 : pEs4}</LinkA>
+            <Strong>Github: </Strong><LinkA href={array[index].gitHub && array[index].nameProject} target='_blank'>{language ? pEn4 : pEs4}</LinkA>
             
             
            </BodySlide>

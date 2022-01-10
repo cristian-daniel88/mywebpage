@@ -71,7 +71,7 @@ function ProfileBody() {
           </P>
           <br/>
           <br/>
-          <Bold>{language ? boldEn5 : boldEs5}</Bold><A href="https://drive.google.com/file/d/1-U_VUpv24BlGHmunJ5DkQY6Mis9OaMLF/view"> {language ? pEn4 : pEs4}</A>
+          <Bold>{language ? boldEn5 : boldEs5}</Bold><A href="https://drive.google.com/file/d/1-U_VUpv24BlGHmunJ5DkQY6Mis9OaMLF/view" target='_blank'> {language ? pEn4 : pEs4}</A>
 
           <br />
           <br />
