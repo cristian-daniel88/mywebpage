@@ -31,7 +31,7 @@ import { burguerMenu } from "../../redux/burguerMenu/burgerMenuActions";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { changeEmailAction } from "../../redux/whatsappEmail/whatsappEmailActions";
 import { screenAction } from "../../redux/screen/screenReducerAction";
-
+import { captchaErrorAction } from "../../redux/captcha/captchaActions";
 
 function NavBar() {
   
@@ -41,7 +41,7 @@ function NavBar() {
  const language = useSelector(state => state.language.english);
  const [hover, setHover] = useState(false);
  const history = useHistory();
- const screen = useSelector(state => state.screen.screen);
+ 
  
 
  const handScreen = () => {
@@ -62,6 +62,7 @@ function NavBar() {
   }
 
   const pushProfile = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -70,6 +71,7 @@ function NavBar() {
   }
 
   const pushHome = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -78,6 +80,7 @@ function NavBar() {
   }
 
   const pushProjects = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -87,6 +90,7 @@ function NavBar() {
   }
 
   const pushContact = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())

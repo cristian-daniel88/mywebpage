@@ -7,7 +7,7 @@ import { CloseIcon, ContainerIcon, ImagenCv, ScreenContainer, ScreenMarco } from
 function ScreenPhoto() {
     const screen = useSelector(state => state.screen.screen);
     const dispatch = useDispatch()
-    console.log(screen);
+   
     const handScreen = () => {
         dispatch(screenAction())
     }

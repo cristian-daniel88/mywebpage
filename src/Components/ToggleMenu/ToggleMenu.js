@@ -36,13 +36,13 @@ import {
   SummaryLanguage,
   UlBurguer,
 } from "./ToggleMenuStyles";
-
+import { captchaErrorAction } from "../../redux/captcha/captchaActions";
 function ToggleMenu() {
   const toggle = useSelector((state) => state.burger.toggle);
   const dispatch = useDispatch();
   const language = useSelector((state) => state.language.english);
-  const history = useHistory();
   const stateEmail = useSelector(state => state.email.email);
+  const history = useHistory();
  
 
   const toggleMenu = () => {
@@ -54,6 +54,7 @@ function ToggleMenu() {
   };
 
   const pushHome = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -63,6 +64,7 @@ function ToggleMenu() {
   };
 
   const pushProfile = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -72,6 +74,7 @@ function ToggleMenu() {
   };
 
   const pushProjects = ()=> {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -81,6 +84,7 @@ function ToggleMenu() {
   }
 
   const pushContact = () => {
+    dispatch(captchaErrorAction(false))
     if (stateEmail) {
       
       dispatch(changeEmailAction())
@@ -144,7 +148,7 @@ function ToggleMenu() {
 
           <ButtonBurguerContainer>
             <ButtonMenu onClick={toggleMenu} >
-              <ButtonBurguer toggle={toggle}/>
+              <ButtonBurguer toggle={toggle ? 'true' : 'false'}/>
             </ButtonMenu>
           </ButtonBurguerContainer>
         </NavBurguer>
