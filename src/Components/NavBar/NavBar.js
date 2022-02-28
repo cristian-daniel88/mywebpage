@@ -97,7 +97,7 @@ function NavBar() {
       
       dispatch(changeEmailAction())
     }
-    //history.push('/contact');
+    history.push('/contact');
   }
 
 
@@ -149,7 +149,7 @@ function NavBar() {
             </NavLiDivIII>
             </NavLiDivI>
           </NavLi>
-          <Link to='/contact'>
+      
           <NavLi onClick={pushContact}>
             <NavLiDivI>
               <NavLiDivII>{language ? enNavItem4 : esNavItem4}</NavLiDivII>
@@ -158,7 +158,7 @@ function NavBar() {
                </NavLiDivIII>
             </NavLiDivI>
           </NavLi>
-          </Link>
+       
           <ButtonTranslateEn onClick={switchLanguage} disabled={language} switch={language}><FlagEn/>En</ButtonTranslateEn>
           <ButtonTranslateEs onClick={switchLanguage} disabled={!language} switch={language}><FlagEs/>Es</ButtonTranslateEs>
         </NavUl>   
