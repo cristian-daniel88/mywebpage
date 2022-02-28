@@ -54,7 +54,7 @@ function ProjectsBody() {
 
     const timerRight = () => {
     
-            dispatch(changeProject());
+         dispatch(changeProject());
             
          setTimeout(() => {
             dispatch(changeProject())

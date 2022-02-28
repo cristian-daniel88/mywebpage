@@ -102,8 +102,10 @@ export const BodySlide = styled.div`
 width: 40%;
 padding: 10px;
 //border: solid 1px white;
-transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")};
-  transition: transform 0.5s ease-in-out;
+//transform: ${(props) => (props.toggle ? "translateX(0%)" : "translateX(-150%)")};
+//transition: transform 0.5s ease-in-out;
+opacity: ${(props) => (props.toggle ? "1" : ".1")};
+transition: opacity .3s ease-in-out;
 @media screen and (max-width: 600px) {
   width: 80%;
 }
