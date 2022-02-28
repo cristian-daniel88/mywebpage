@@ -32,6 +32,8 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { changeEmailAction } from "../../redux/whatsappEmail/whatsappEmailActions";
 import { screenAction } from "../../redux/screen/screenReducerAction";
 import { captchaErrorAction } from "../../redux/captcha/captchaActions";
+import { Linkk } from "../Link/LinkStyles";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   
@@ -95,7 +97,7 @@ function NavBar() {
       
       dispatch(changeEmailAction())
     }
-    history.push('/contact');
+    //history.push('/contact');
   }
 
 
@@ -147,7 +149,7 @@ function NavBar() {
             </NavLiDivIII>
             </NavLiDivI>
           </NavLi>
-
+          <Link to='/contact'>
           <NavLi onClick={pushContact}>
             <NavLiDivI>
               <NavLiDivII>{language ? enNavItem4 : esNavItem4}</NavLiDivII>
@@ -156,6 +158,7 @@ function NavBar() {
                </NavLiDivIII>
             </NavLiDivI>
           </NavLi>
+          </Link>
           <ButtonTranslateEn onClick={switchLanguage} disabled={language} switch={language}><FlagEn/>En</ButtonTranslateEn>
           <ButtonTranslateEs onClick={switchLanguage} disabled={!language} switch={language}><FlagEs/>Es</ButtonTranslateEs>
         </NavUl>   

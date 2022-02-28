@@ -10,6 +10,8 @@ import Profile from './Pages/Profile';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
 import ScreenPhoto from './Components/ScreenPhoto/ScreenPhoto';
+import { HashRouter } from 'react-router-dom';
+
 
 
 
@@ -21,7 +23,9 @@ function App() {
   return (
     <>
     
+    <HashRouter>
     <GlobalStyles/>
+
     <NavBar/>
     <ScreenPhoto/>
    <ToggleMenu/>
@@ -48,6 +52,7 @@ function App() {
     </Switch>
 
     <Footer/>
+    </HashRouter>
     </>
   );
 }
