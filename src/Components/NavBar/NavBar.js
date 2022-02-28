@@ -107,7 +107,7 @@ function NavBar() {
         <PhotoContainer onClick={handScreen}/>
 
         <Details>
-          <Name onClick={pushHome}>Cristian Daniel Herrera</Name>
+          <Name onClick={pushHome}>Cristian Herrera Dev</Name>
 
           <Position>
             <H2>Web Developer</H2>
