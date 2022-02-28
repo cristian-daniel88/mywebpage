@@ -15,7 +15,7 @@ export const myProfileUk = "See my projects";
 export const contactEn = "https://api.whatsapp.com/send?phone=+447864069428&text=Hello! I would like more information about your services as a Developer/Web Programmer.";
 
 // Copyright
-export const copyrightEn = "Copyright 2022 Cristian Daniel Herrera, web developer | All Rights Reserved"
+export const copyrightEn = "Copyright 2022 Cristian Herrera Dev, web developer | All Rights Reserved"
 
 // Profile
 export const h4En1 = "PERSONAL INFORMATION";

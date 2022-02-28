@@ -15,7 +15,7 @@ export const contactEs = "https://api.whatsapp.com/send?phone=+447864069428&text
 
 
 // Copyright
-export const copyrightEs = "Copyright 2022 Cristian Daniel Herrera, web developer | Todos los derechos reservados";
+export const copyrightEs = "Copyright 2022 Cristian Herrera Dev, web developer | Todos los derechos reservados";
 
 // Profile
 export const h4Es1 = "INFORMACION PERSONAL";
