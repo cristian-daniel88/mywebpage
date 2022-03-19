@@ -191,7 +191,7 @@ function FormContactEn() {
             <EmailLabel>Subject:</EmailLabel>
             <EmailInput 
             
-            
+            name="_subject"
              placeholder="Write a subject (optional)."
              required
             />
