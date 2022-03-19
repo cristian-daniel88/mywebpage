@@ -200,7 +200,7 @@ function FormContactEn() {
           <InputContainer>
             <EmailLabel></EmailLabel>
             <EmailTextArea 
-            
+            name="message"
            
             placeholder="Write a message."
             required
