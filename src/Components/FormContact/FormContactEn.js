@@ -169,10 +169,8 @@ function FormContactEn() {
         (<Done/>)
         :
         (
-          <FormContact
-          onSubmit={(e) => {
-            submitEmail(e);
-          }}
+          <FormContact  action="https://formsubmit.co/email@cristianherreradev.co.uk" method="POST"
+        
         >
           <InputContainer>
             <EmailLabel>
@@ -180,60 +178,41 @@ function FormContactEn() {
             </EmailLabel>
   
             <EmailInput
-              onChange={handleInputEmailI}
-              value={emailI}
-              onBlur={onBlurEmailI}
+            
               onClick={cleanErrorWithClickI }
               placeholder="Your email address. Eg. example@example.com"
               type='email'
+              required
             />
           </InputContainer>
   
-          <InputContainer>
-            <EmailLabel>
-              Repeat your email address: <EmailSpan>{spanEmail2}</EmailSpan>
-            </EmailLabel>
-  
-            <EmailInput
-              onChange={handleInputEmailII}
-              value={emailII}
-              onBlur={onBlurEmailII}
-              onClick={cleanErrorWithClickII }
-              placeholder="Please, repeat your email address again."
-              type="email"
-            />
-          </InputContainer>
   
           <InputContainer>
             <EmailLabel>Subject:</EmailLabel>
             <EmailInput 
-             onChange={handleInputSubject}
-             value={subject}
+            
+            
              placeholder="Write a subject (optional)."
+             required
             />
           </InputContainer>
   
           <InputContainer>
             <EmailLabel></EmailLabel>
             <EmailTextArea 
-            onChange={handleInputBody}
-            value={body}
+            
+           
             placeholder="Write a message."
+            required
             />
           </InputContainer>
   
           <InputContainer>
             <EmailSpan style={{ marginTop: "20px", fontSize: "1.5em" }}>
-              {captchaError && 'Captcha Error'}
+             
               
             </EmailSpan>
-            <RecaptchaEmail>
-              <ReCAPTCHA
-                ref={captcha}
-                sitekey="6Ld4XP8dAAAAAEv6mKPZpk_iKqHTIMXTUy3D6eym"
-                onChange={onChange}
-              />
-            </RecaptchaEmail>
+         
           </InputContainer>
   
           <InputContainer>
