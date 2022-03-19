@@ -178,7 +178,7 @@ function FormContactEn() {
             </EmailLabel>
   
             <EmailInput
-            
+              name="email"
               onClick={cleanErrorWithClickI }
               placeholder="Your email address. Eg. example@example.com"
               type='email'
